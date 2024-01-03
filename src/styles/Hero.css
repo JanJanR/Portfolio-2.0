@@ -1,0 +1,9 @@
+.hero-name h1{
+  text-align: center;
+  line-height: normal;
+  margin-bottom: 0;
+}
+
+.hero-description h2 {
+  margin-right: 50px;
+}
