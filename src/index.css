@@ -15,11 +15,18 @@
 
 body {
   padding: 5px;
+  margin: 0;
 }
 
 h3 {
   font-family: 'Taviraj', serif;
   font-size: 25px;
+  margin: 0;
+}
+
+button{
+  background: none;
+  border-color: white;
 }
 
 /* a {
