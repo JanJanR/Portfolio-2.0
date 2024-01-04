@@ -1,0 +1,19 @@
+.slider-container {
+  background-color: #272727;
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.stack-slider {
+  width: 1750px;
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.horizontal-line {
+  border-top: 1px solid black;
+  width: 50%;
+  margin: 0 auto;
+  text-align: center;
+}
