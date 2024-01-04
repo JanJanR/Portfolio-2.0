@@ -5,10 +5,13 @@
 }
 
 .stack-slider {
-  width: 1750px;
   padding: 3rem 0;
   display: flex;
   justify-content: space-around;
+}
+
+.img-container img{
+  margin: 0 40px;
 }
 
 .horizontal-line {

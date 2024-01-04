@@ -20,31 +20,31 @@ function App() {
         <div className='slider-container'>
           <Marquee>
             <div className='stack-slider'>
-              <div>
+              <div className='img-container'>
                 <img src={Ruby} alt="ruby" />
               </div>
-              <div>
+              <div className='img-container'>
                 <img src={Rails} alt="rails" />
               </div>
-              <div>
+              <div className='img-container'>
                 <img src={React} alt="react" />
               </div>
-              <div>
+              <div className='img-container'>
                 <img src={Firebase} alt="firebase" />
               </div>
-              <div>
+              <div className='img-container'>
                 <img src={Html} alt="html" />
               </div>
-              <div>
+              <div className='img-container'>
                 <img src={Css} alt="css" />
               </div>
-              <div>
+              <div className='img-container'>
                 <img src={Javascript} alt="javascript" />
               </div>
-              <div>
+              <div className='img-container'>
                 <img src={Figma} alt="figma" />
               </div>
-              <div>
+              <div className='img-container'>
                 <img src={Vercel} alt="vercel" />
               </div>
             </div>
