@@ -2,9 +2,11 @@
   text-align: center;
   line-height: normal;
   margin-bottom: 0;
+  font-size: 200px;
 }
 
 .hero-description h2 {
   margin-right: 250px;
+  font-size: 35px;
   margin-top: 0;
 }
