@@ -17,7 +17,7 @@ function VantaBackground() {
       lowlightColor: 0xffffff,
       baseColor: 0x0,
       blurFactor: 0.75,
-      speed: 2.10
+      speed: 4
     })
   }, [])
   return (

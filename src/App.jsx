@@ -13,14 +13,28 @@ import Figma from "./assets/figma.svg"
 import Vercel from "./assets/vercel.svg"
 
 import Marquee from "react-fast-marquee";
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/css';
-import 'swiper/css/effect-coverflow'
+import Slider from "react-slick";
+import { useState } from 'react';
+import "slick-carousel/slick/slick.css";
+import "slick-carousel/slick/slick-theme.css";
 
 
-// import Airbroomnbroom from './assets/AirBroomNBroom.png'
+const images = [Ruby, Rails, Vercel, Figma, Javascript]
 
 function App() {
+
+  const [imageIndex, setImageIndex] = useState(0)
+
+  const settings = {
+    infinite: true,
+    lazyLoad: true,
+    speed: 300,
+    slidesToShow: 3,
+    centerMode: true,
+    centerPadding: 0,
+    beforeChange: (current, next) => setImageIndex(next)
+  }
+
   return (
     <>
       <Navbar />
@@ -59,43 +73,14 @@ function App() {
           </Marquee>
         </div>
       <div className='horizontal-line'></div>
-      <div className='carousel-container'>
-        <Swiper
-          // effect={'coverflow'}
-          // grabCursor={true}
-          // centeredSlides={true}
-          // loop={true}
-          // slidesPerView={'auto'}
-          // spaceBetween={1}
-        //   coverflowEffect={{
-        //     rotate: 50,
-        // stretch: 0,
-        // depth: 100,
-        // modifier: 1,
-        // slideShadows: true,
-        //   }}
-          effect= {"coverflow"}
-          grabCursor={true}
-          centeredSlides={true}
-          loop={true}
-          slidesPerView={'auto'}
-          coverflowEffect={{
-            rotate: 50,
-            stretch: 0,
-            depth: 100,
-            modifier: 1,
-            slideShadows: true,
-          }}
-          className='swiper-container'
-        >
-          <div>
-            <SwiperSlide><img src={Ruby} alt="ruby" /></SwiperSlide>
-            <SwiperSlide><img src={Figma} alt="ruby" /></SwiperSlide>
-            <SwiperSlide><img src={Html} alt="ruby" /></SwiperSlide>
-            <SwiperSlide><img src={Ruby} alt="ruby" /></SwiperSlide>
-            <SwiperSlide><img src={Ruby} alt="ruby" /></SwiperSlide>
-          </div>
-        </Swiper>
+      <div className='carousel-slider'>
+        <Slider {...settings}>
+          {images.map((img, index) => (
+            <div key={index} className={index === imageIndex ? "slide activeSlide" : "slide"}>
+              <img src={img} alt={img} />
+            </div>
+          ))}
+        </Slider>
       </div>
       <h1>HelloWorld</h1>
     </>
