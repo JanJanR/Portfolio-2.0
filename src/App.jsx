@@ -12,6 +12,12 @@ import Javascript from "./assets/javascript.svg"
 import Figma from "./assets/figma.svg"
 import Vercel from "./assets/vercel.svg"
 
+import AirBroomNBroom from "./assets/AirBroomNBroom.png";
+import CartePub from "./assets/Carte Pub.png";
+import CindyKawak from "./assets/Cindy Kawak.png";
+import PhilCannes from "./assets/PhilCannes Detailing.png";
+import Walkin from "./assets/Walkin.png";
+
 import Marquee from "react-fast-marquee";
 import Slider from "react-slick";
 import { useState } from 'react';
@@ -19,7 +25,13 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-const images = [Ruby, Rails, Vercel, Figma, Javascript]
+const images = [
+  { src: AirBroomNBroom, title: 'AirBroom N Broom', description: 'A dynamic, open-source programming language' },
+  { src: CartePub, title: 'CartePub', description: 'A web application framework for the Ruby language' },
+  { src: CindyKawak, title: 'Cindy Kawak', description: 'A web application framework for the Ruby language' },
+  { src: PhilCannes, title: 'PhilCannes Detailing', description: 'A web application framework for the Ruby language' },
+  { src: Walkin, title: 'WalkIn', description: 'A web application framework for the Ruby language' },
+]
 
 function App() {
 
@@ -32,7 +44,7 @@ function App() {
     slidesToShow: 3,
     centerMode: true,
     centerPadding: 0,
-    beforeChange: (current, next) => setImageIndex(next)
+    beforeChange: (current, next) => setImageIndex(next),
   }
 
   return (
@@ -75,13 +87,20 @@ function App() {
       <div className='horizontal-line'></div>
       <div className='carousel-slider'>
         <Slider {...settings}>
-          {images.map((img, index) => (
+          {images.map((image, index) => (
             <div key={index} className={index === imageIndex ? "slide activeSlide" : "slide"}>
-              <img src={img} alt={img} />
+              <img src={image.src} alt={image.title} />
+              {index === imageIndex && (
+                <div className="slide-content">
+                  <h1>{image.title}</h1>
+                  <p>{image.description}</p>
+                </div>
+              )}
             </div>
           ))}
         </Slider>
       </div>
+
       <h1>HelloWorld</h1>
     </>
   )

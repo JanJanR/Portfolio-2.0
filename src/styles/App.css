@@ -15,6 +15,7 @@
   width: 50%;
 }
 
+/* Horizontal-line */
 .horizontal-line {
   border-top: 1px solid black;
   width: 50%;
@@ -24,22 +25,36 @@
 
 /* Carousel */
 .carousel-slider {
-  width: 50%;
+  width: 100%;
   margin: 10rem auto;
+  height: 100%;
 }
 
 .slide img{
-  width: 20rem;
-  margin: 0 auto;
+  width: 100%;
+  height: auto;
 }
 
 .slide {
-  transform: scale(0.2);
+  transform: scale(0.8);
   transition: transform 300ms;
-  opacity: 0.5;
+  opacity: 0.2;
 }
 
 .activeSlide {
-  transform: scale(1.1);
+  transform: scale(1.0);
   opacity: 1;
 }
+
+.slide-content {
+  text-align: center;
+}
+
+.slide-content h1 {
+  font-size: 80px;
+}
+
+/* .slick-prev,
+.slick-next {
+  display: none !important;
+} */
