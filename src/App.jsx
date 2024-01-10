@@ -25,17 +25,19 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
+
 const images = [
-  { src: AirBroomNBroom, title: 'AirBroom N Broom', description: 'A dynamic, open-source programming language' },
-  { src: CartePub, title: 'CartePub', description: 'A web application framework for the Ruby language' },
-  { src: CindyKawak, title: 'Cindy Kawak', description: 'A web application framework for the Ruby language' },
-  { src: PhilCannes, title: 'PhilCannes Detailing', description: 'A web application framework for the Ruby language' },
-  { src: Walkin, title: 'WalkIn', description: 'A web application framework for the Ruby language' },
+  { src: PhilCannes, title: 'PhilCannes Detailing', description: 'website for a boat detailing services' },
+  { src: CartePub, title: 'CartePub', description: 'an app for digital advertisement' },
+  { src: Walkin, title: 'WalkIn', description: 'mobile app that helps people to find a table for tonight to make a reservation' },
+  { src: AirBroomNBroom, title: 'AirBroom N Broom', description: '(AirBnB clone) is a market place for broomstick rental' },
+  { src: CindyKawak, title: 'Cindy Kawak', description: 'website to download an E-Book' },
 ]
 
 function App() {
 
   const [imageIndex, setImageIndex] = useState(0)
+  // const [tiltAngle, setTiltAngle] = useState(0);
 
   const settings = {
     infinite: true,
@@ -100,8 +102,8 @@ function App() {
           ))}
         </Slider>
       </div>
-
-      <h1>HelloWorld</h1>
+      <div className='horizontal-line'></div>
+      <h1>Hello World</h1>
     </>
   )
 }
