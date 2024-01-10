@@ -86,7 +86,7 @@ function App() {
             </div>
           </Marquee>
         </div>
-      <div className='horizontal-line'></div>
+      {/* <div className='horizontal-line'></div>  */}
       <div className='carousel-slider'>
         <Slider {...settings}>
           {images.map((image, index) => (
