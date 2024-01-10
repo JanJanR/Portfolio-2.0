@@ -1,0 +1,43 @@
+.contact-container {
+  margin: 160px 0 160px 50px;
+  /* margin-left: 50px; */
+}
+
+.contact-title h1 {
+  font-size: 50px;
+  margin-bottom: 100px;
+}
+
+.contact-description h2 {
+  text-align: start;
+  font-size: 30px;
+}
+
+.vertical-line {
+  border-left: 1px solid black;
+}
+
+.contact-social-media {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact-content {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 0;
+}
+
+.right-contact {
+  background-color: blue;
+  width: 40%;
+}
+
+form {
+  display: grid;
+  padding: 2rem;
+}
+
+label h2 {
+  text-align: start;
+}

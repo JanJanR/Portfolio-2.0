@@ -2,6 +2,8 @@ import './styles/App.css'
 
 import Hero from './components/Hero'
 import Navbar from './components/Navbar'
+import Contact from './components/Contact'
+
 import Ruby from "./assets/ruby.svg";
 import Rails from "./assets/rails.svg"
 import React from "./assets/react.svg"
@@ -25,7 +27,6 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 
-
 const images = [
   { src: PhilCannes, title: 'PhilCannes Detailing', description: 'website for a boat detailing services' },
   { src: CartePub, title: 'CartePub', description: 'an app for digital advertisement' },
@@ -37,7 +38,6 @@ const images = [
 function App() {
 
   const [imageIndex, setImageIndex] = useState(0)
-  // const [tiltAngle, setTiltAngle] = useState(0);
 
   const settings = {
     infinite: true,
@@ -103,7 +103,8 @@ function App() {
         </Slider>
       </div>
       <div className='horizontal-line'></div>
-      <h1>Hello World</h1>
+      <Contact />
+      <h1>Copyright</h1>
     </>
   )
 }
