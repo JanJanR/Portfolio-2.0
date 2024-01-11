@@ -29,7 +29,7 @@
 }
 
 .right-contact {
-  background-color: #202020;
+  background-color: #E4DEBE;
   width: 40%;
   height: 860px;
 }
@@ -41,11 +41,16 @@ form {
 
 label h2 {
   text-align: start;
+  color: #242424;
 }
 
 .right-contact input {
   height: 40px;
   font-size: 20px;
+}
+
+.right-contact h1 {
+  color: #242424;
 }
 
 textarea {
@@ -54,8 +59,8 @@ textarea {
 }
 
 .submit-button {
-  background: none;
-  border-color: white;
+  background: #242424;
+  border-color: #242424;
   font-family: 'Taviraj', serif;
   width: 50%;
   margin: 0 auto;
@@ -68,7 +73,7 @@ textarea {
 
 .submit-button:hover{
   transform: scale(1.1);
-  background-color: #242424;
+  background-color: #202020;
   cursor: pointer;
 }
 
