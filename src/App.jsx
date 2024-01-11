@@ -1,8 +1,7 @@
 import './styles/App.css'
 
-import Hero from './components/Hero'
-import Navbar from './components/Navbar'
 import Contact from './components/Contact'
+import VantaBackground from "./components/VantaBackground";
 
 import Ruby from "./assets/ruby.svg";
 import Rails from "./assets/rails.svg"
@@ -51,8 +50,7 @@ function App() {
 
   return (
     <>
-      <Navbar />
-      <Hero />
+      <VantaBackground />
         <div className='slider-container'>
           <Marquee>
             <div className='stack-slider'>
