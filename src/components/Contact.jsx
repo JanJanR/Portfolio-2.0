@@ -38,7 +38,7 @@ function Contact() {
         <div className="contact-content">
           <div className="left-contact">
             <div className="contact-description">
-              <h2>Got an opportunity, or just want to say Hello ? <br/>Feel free to reach me out.</h2>
+              <h2>Got an <b>opportunity</b>, or just want to say Hello ? <br/>Feel free to reach me out.</h2>
             </div>
             <div className="contact-social-media">
               <div className="github">
