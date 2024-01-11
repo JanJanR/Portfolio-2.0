@@ -23,6 +23,7 @@ function Contact() {
       .then((result) => {
           console.log(result.text);
           console.log("message send")
+          e.target.reset();
       }, (error) => {
           console.log(error.text);
       });
@@ -40,9 +41,21 @@ function Contact() {
               <h2>Got an opportunity, or just want to say Hello ? <br/>Feel free to reach me out.</h2>
             </div>
             <div className="contact-social-media">
-              <IconBrandGithub size={70} stroke={0.5}/>
-              <IconMail size={70} stroke={0.5}/>
-              <IconBrandLinkedin size={70} stroke={0.5}/>
+              <div className="github">
+                <a href="https://github.com/JanJanR" target="_blank" rel="noopener noreferrer">
+                  <IconBrandGithub size={70} stroke={0.5} id="github"/>
+                </a>
+              </div>
+              <div className="mail">
+                <a href="mailto:romerojohn1012@gmail.com">
+                  <IconMail size={70} stroke={0.5} id="mail"/>
+                </a>
+              </div>
+              <div className="linkedin">
+                <a href="https://www.linkedin.com/in/john-romero-272b22256/" target="_blank" rel="noopener noreferrer">
+                  <IconBrandLinkedin size={70} stroke={0.5} id="linkedin"/>
+                </a>
+              </div>
             </div>
           </div>
           <div className='vertical-line'></div>

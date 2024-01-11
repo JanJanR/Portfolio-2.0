@@ -16,5 +16,9 @@
   justify-content: space-around;
   align-items: center;
   margin: 0;
-  /* padding-right: 20px; */
+}
+
+.navbar-projects:hover, .navbar-about:hover, .navbar-contact:hover {
+  transform: scale(1.1);
+  cursor: pointer;
 }

@@ -86,8 +86,10 @@ function App() {
             </div>
           </Marquee>
         </div>
-      {/* <div className='horizontal-line'></div>  */}
       <div className='carousel-slider'>
+        <div className="work-title">
+          <h1>Works</h1>
+        </div>
         <Slider {...settings}>
           {images.map((image, index) => (
             <div key={index} className={index === imageIndex ? "slide activeSlide" : "slide"}>
@@ -104,7 +106,9 @@ function App() {
       </div>
       <div className='horizontal-line'></div>
       <Contact />
-      <h1>Copyright</h1>
+      <div className='issue'>
+        <h1>Copyright</h1>
+      </div>
     </>
   )
 }
