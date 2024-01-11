@@ -58,7 +58,6 @@ function Contact() {
               </div>
             </div>
           </div>
-          <div className='vertical-line'></div>
           <div className="right-contact">
             <form ref={form} onSubmit={sendEmail}>
               <h1>send me an email</h1>

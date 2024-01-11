@@ -1,5 +1,6 @@
 import './styles/App.css'
 
+
 import Contact from './components/Contact'
 import VantaBackground from "./components/VantaBackground";
 
@@ -102,11 +103,7 @@ function App() {
           ))}
         </Slider>
       </div>
-      <div className='horizontal-line'></div>
       <Contact />
-      <div className='issue'>
-        <h1>Copyright</h1>
-      </div>
     </>
   )
 }

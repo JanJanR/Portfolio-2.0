@@ -1,7 +1,6 @@
 import { useEffect } from "react";
 import FOG from "vanta/src/vanta.fog";
 import "../styles/VantaBackground.css";
-// import App from "../App";
 import Navbar from "./Navbar";
 import Hero from "./Hero";
 
@@ -25,7 +24,6 @@ function VantaBackground() {
   return (
     <>
      <div id="vanta" className="bg">
-      {/* <App /> */}
       <Navbar />
       <Hero />
      </div>
