@@ -5,7 +5,7 @@
   color-scheme: light dark;
   color: rgba(255, 255, 255, 0.87);
   background-color: #242424;
-  background-size: 350px 350px;
+  background-size: 200px 200px;
   background-image:
   linear-gradient(to right,#343434 1px, transparent 1px),
   linear-gradient(to bottom, #343434 1px, transparent 1px);
@@ -19,7 +19,6 @@
 body{
   margin: 0;
   padding: 0;
-  /* height: 100%; */
   box-sizing: border-box;
 }
 
