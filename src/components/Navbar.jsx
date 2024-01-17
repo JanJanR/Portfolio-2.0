@@ -44,19 +44,21 @@ function Navbar() {
             isOpen={isModalOpen}
             onRequestClose={closeModal}
             contentLabel="Projects Modal"
-            className={"modal"}
-            animate={{
-              opacity: isModalOpen ? 1 : 0,
-              y: isModalOpen ? 0 : -50,
-            }}
+            className="modal"
+            style={{ overlay: { backgroundColor: 'transparent' } }}
           >
             <div className="btn-close-modal">
-              <IconX onClick={closeModal} size={80} stroke={0.4} className="icon-x" aria-label="Close Modal"/>
+              <IconX
+                onClick={closeModal}
+                size={80} stroke={0.4}
+                className="icon-x"
+                aria-label="Close Modal"
+              />
             </div>
             <motion.div
-              initial={{ opacity: 0, y: -50 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5 }}
+              // initial={{ opacity: 0, y: -10}}
+              // animate={{ opacity: 1, y: 0 }}
+              // transition={{ duration: 1 }}
             >
               <div className="projects-tab">
                 <h1>PhilCannes Detailing</h1>
