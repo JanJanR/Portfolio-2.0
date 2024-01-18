@@ -15,7 +15,6 @@ function Navbar() {
   };
 
   const closeModal = () => {
-    // setIsModalOpen(false);
     setIsClosing(true);
     setTimeout(() => {
       setIsModalOpen(false);
