@@ -1,24 +1,23 @@
 import './styles/App.css'
 
-
 import Contact from './components/Contact'
 import VantaBackground from "./components/VantaBackground";
 
-import Ruby from "./assets/ruby.svg";
-import Rails from "./assets/rails.svg"
-import React from "./assets/react.svg"
-import Firebase from "./assets/firebase.svg"
-import Html from "./assets/html.svg"
-import Css from "./assets/css.svg"
-import Javascript from "./assets/javascript.svg"
-import Figma from "./assets/figma.svg"
-import Vercel from "./assets/vercel.svg"
+import Ruby from "./assets/marquee/ruby.svg";
+import Rails from "./assets/marquee/rails.svg"
+import React from "./assets/marquee/react.svg"
+import Firebase from "./assets/marquee/firebase.svg"
+import Html from "./assets/marquee/html.svg"
+import Css from "./assets/marquee/css.svg"
+import Javascript from "./assets/marquee/javascript.svg"
+import Figma from "./assets/marquee/figma.svg"
+import Vercel from "./assets/marquee/vercel.svg"
 
-import AirBroomNBroom from "./assets/AirBroomNBroom.png";
-import CartePub from "./assets/Carte Pub.png";
-import CindyKawak from "./assets/Cindy Kawak.png";
-import PhilCannes from "./assets/PhilCannes Detailing.png";
-import Walkin from "./assets/Walkin.png";
+import AirBroomNBroom from "./assets/slider/AirBroomNBroom.png";
+import CartePub from "./assets/slider/Carte Pub.png";
+import CindyKawak from "./assets/slider/Cindy Kawak.png";
+import PhilCannes from "./assets/slider/PhilCannes Detailing.png";
+import Walkin from "./assets/slider/Walkin.png";
 
 import Marquee from "react-fast-marquee";
 import Slider from "react-slick";

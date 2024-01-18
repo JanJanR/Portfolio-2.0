@@ -1,6 +1,7 @@
 import '../styles/Hero.css'
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/scrolldown.json";
+import { motion } from "framer-motion";
 
 function Hero() {
   const defaultOptions = {
@@ -14,19 +15,46 @@ function Hero() {
 
   return (
     <div className="hero-container">
-      <div className="hero-name">
+      <motion.div
+        className="hero-name"
+        variants={{
+          hidden: {opacity: 0, y: -100},
+          visible: {opacity: 1, y: 0}
+        }}
+        initial='hidden'
+        animate='visible'
+        transition={{duration: 1}}
+      >
         <h1>John Romero</h1>
-      </div>
-      <div className='hero-description'>
+      </motion.div>
+      <motion.div
+        className='hero-description'
+        variants={{
+          hidden: {opacity: 0, x: 100},
+          visible: {opacity: 1, x: 0}
+        }}
+        initial='hidden'
+        animate='visible'
+        transition={{duration: 1}}
+      >
         <h2>a full stack developer</h2>
-      </div>
-      <div className='scroll-lottie'>
+      </motion.div>
+      <motion.div
+        className='scroll-lottie'
+        variants={{
+          hidden: {opacity: 0, y: 100},
+          visible: {opacity: 1, y: 0}
+        }}
+        initial='hidden'
+        animate='visible'
+        transition={{duration: 1}}
+      >
         <Lottie
           options={defaultOptions}
           height={80}
           width={80}
         />
-      </div>
+      </motion.div>
     </div>
   )
 }
