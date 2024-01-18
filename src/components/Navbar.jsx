@@ -5,17 +5,22 @@ import { useState, useEffect } from "react";
 import { IconX } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
 
-
-
 function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
+
 
   const openModal = () => {
     setIsModalOpen(true);
   };
 
   const closeModal = () => {
-    setIsModalOpen(false);
+    // setIsModalOpen(false);
+    setIsClosing(true);
+    setTimeout(() => {
+      setIsModalOpen(false);
+      setIsClosing(false);
+    }, 700);
   };
 
   useEffect(() => {
@@ -44,7 +49,7 @@ function Navbar() {
             isOpen={isModalOpen}
             onRequestClose={closeModal}
             contentLabel="Projects Modal"
-            className="modal"
+            className={`modal ${isClosing ? 'closing' : ''}`}
             style={{ overlay: { backgroundColor: 'transparent' } }}
           >
             <div className="btn-close-modal">
@@ -56,9 +61,9 @@ function Navbar() {
               />
             </div>
             <motion.div
-              // initial={{ opacity: 0, y: -10}}
-              // animate={{ opacity: 1, y: 0 }}
-              // transition={{ duration: 1 }}
+              initial={{ opacity: 0, y: -100}}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 1.5 }}
             >
               <div className="projects-tab">
                 <h1>PhilCannes Detailing</h1>

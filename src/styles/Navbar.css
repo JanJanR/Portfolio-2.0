@@ -56,14 +56,27 @@
   display: flex;
   justify-content: space-around;
   align-items: center;
-  animation: slideIn 1s ease-out;
+  animation: slideIn 0.7s ease-in;
+}
+
+.modal.closing {
+  animation: slideOut 0.7s ease-out;
 }
 
 @keyframes slideIn {
   from {
-    transform: translateX(-100%);
+    transform: translateY(-100%);
   }
   to {
-    transform: translateX(0);
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-100%);
   }
 }
