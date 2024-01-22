@@ -6,7 +6,7 @@ import Hero from "./Hero";
 
 function VantaBackground() {
   useEffect(() => {
-    FOG ({
+    const vantaEffect = FOG ({
       el:'#vanta',
       mouseControls: true,
       touchControls: true,
@@ -19,7 +19,13 @@ function VantaBackground() {
       baseColor: 0x0,
       blurFactor: 0.75,
       speed: 4
+
     })
+    return () => {
+      if (vantaEffect) {
+        vantaEffect.destroy();
+      }
+    };
   }, [])
   return (
     <>

@@ -4,6 +4,7 @@ import Modal from 'react-modal';
 import { useState, useEffect } from "react";
 import { IconX } from '@tabler/icons-react';
 import { motion } from 'framer-motion';
+import { Link } from "react-router-dom";
 
 function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -31,13 +32,13 @@ function Navbar() {
 
   return (
     <div className="navbar-container">
-      <img src={Logo} alt="logo" className="logo"/>
+      <Link to='/'><img src={Logo} alt="logo" className="logo"/></Link>
       <div className="navbar-item">
         <div className="navbar-projects" onClick={openModal}>
           <h3>Projects</h3>
         </div>
         <div className="navbar-about">
-          <h3>About</h3>
+          <Link to='about'><h3>About</h3></Link>
         </div>
         <button className="navbar-contact">
           <h3>Contact Me</h3>
