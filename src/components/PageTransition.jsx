@@ -1,27 +1,25 @@
-import { motion } from "framer-motion";
-import"../styles/PageTransition.css"
+import '../styles/PageTransition.css'
+import PropTypes from "prop-types"
+import { useRef, useEffect } from "react";
+import {Power4} from "gsap";
 
-function PageTransition(OgComponent) {
-  console.log("test : Rendering PageTransition");
+function PageTransition({timeline}) {
+  const trans = useRef(null);
+  useEffect(() => {
+    timeline.to(trans.current, {
+      duration: 10,
+      y: -2600,
+      ease: Power4.easeOut
+    })
+  })
   return (
-    <>
-      <OgComponent/>
-      <motion.div
-        className="slide-in"
-        initial= {{scaleY: 0}}
-        animate= {{scaleY: 1}}
-        exit={{scaleY: 1}}
-        transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
-        />
-      <motion.div
-        className="slide-out"
-        initial= {{scaleY: 1}}
-        animate= {{scaleY: 0}}
-        exit={{scaleY: 0}}
-        transition={{duration: 1, ease: [0.22, 1, 0.36, 1]}}
-      />
-    </>
+    <div>
+      <div className='transition-effect' ref={trans}></div>
+    </div>
   )
 }
+PageTransition.propTypes = {
+  timeline: PropTypes.any,
+};
 
 export default PageTransition
