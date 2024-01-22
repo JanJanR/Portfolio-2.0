@@ -6,12 +6,6 @@ import {Power4, gsap} from "gsap";
 function PageTransition({timeline}) {
   const trans = useRef(null);
   useEffect(() => {
-
-    // gsap.set(trans.current, {
-    //   y: -window.innerHeight,
-    //   display: "block",
-    // });
-
     timeline.to(trans.current, {
       duration: 10,
       y: 2600,

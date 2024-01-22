@@ -40,9 +40,11 @@ function Navbar() {
         <div className="navbar-about">
           <Link to='about'><h3>About</h3></Link>
         </div>
-        <button className="navbar-contact">
-          <h3>Contact Me</h3>
-        </button>
+        <Link to='contact'>
+          <button className="navbar-contact">
+            <h3>Contact Me</h3>
+          </button>
+        </Link>
       </div>
       {isModalOpen && (
           <Modal
