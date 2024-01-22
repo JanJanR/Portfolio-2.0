@@ -34,7 +34,7 @@ const images = [
   { src: CindyKawak, title: 'Cindy Kawak', description: 'website to download an E-Book' },
 ]
 
-function App() {
+function Home() {
 
   const [imageIndex, setImageIndex] = useState(0)
 
@@ -107,4 +107,4 @@ function App() {
   )
 }
 
-export default App
+export default Home

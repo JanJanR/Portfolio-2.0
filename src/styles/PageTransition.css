@@ -1,0 +1,14 @@
+.slide-in,
+.slide-out {
+  width: 100%;
+  height: 100vh;
+  background: black;
+}
+
+.slide-in {
+  transform-origin: bottom;
+}
+
+.slide-out {
+  transform-origin: top;
+}

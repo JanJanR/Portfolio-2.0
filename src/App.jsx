@@ -1,21 +1,30 @@
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-
 import Home from "./pages/Home";
-import About from "./pages/About";
-function App() {
-  return (
-    <BrowserRouter>
-      <main>
-        <Routes>
-          <Route index element={<Home />}/>
-          <Route path="about" element={<About />}/>
-        </Routes>
-      </main>
-    </BrowserRouter>
-  )
-}
+import AboutWithTransition from "./pages/About";
+import { AnimatePresence } from "framer-motion";
 
-export default App
+const App = () => {
+  return (
+    <AnimatePresence>
+      <BrowserRouter>
+        <main>
+          <Routes>
+            <Route
+              path="/"
+              element={<Home />}
+              />
+            <Route
+              path="/about"
+              element={<AboutWithTransition />}
+              />
+          </Routes>
+        </main>
+      </BrowserRouter>
+    </AnimatePresence>
+  );
+};
+
+export default App;
 
 
 // import './styles/App.css'

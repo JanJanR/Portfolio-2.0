@@ -1,4 +1,5 @@
 import Navbar from "../components/Navbar";
+import PageTransition from "../components/PageTransition";
 
 function About() {
   return (
@@ -10,3 +11,4 @@ function About() {
 }
 
 export default About
+export const AboutWithTransition = PageTransition(About);
