@@ -27,12 +27,11 @@ function Contact() {
   const contentRef = useRef(null);
 
   useEffect(() => {
-    // Content animation (coming down from the top)
     gsap.from(contentRef.current, {
       duration: 1,
       y: "-100%",
       ease: "power4.out",
-      delay: 1, // Delay to wait for PageTransition to finish
+      delay: 1,
     });
   }, []);
 
