@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+// import PageTransition from "./components/PageTransition"
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -12,6 +13,7 @@ import Walkin from "./pages/Walkin";
 const App = () => {
   return (
     <Router>
+      {/* <PageTransition /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
