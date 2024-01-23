@@ -1,38 +1,58 @@
-import '../styles/PageTransition.css'
-import PropTypes from "prop-types"
+import '../styles/PageTransition.css';
 import { useRef, useEffect } from "react";
-import {Power4, gsap} from "gsap";
+import { Power4, gsap } from "gsap";
 
-function PageTransition({timeline}) {
+function PageTransition() {
   const trans = useRef(null);
+
   useEffect(() => {
-    timeline.to(trans.current, {
-      duration: 10,
-      y: 2600,
-      ease: Power4.easeOut,
-      onComplete: () => {
-        gsap.set(trans.current, { display: "none" });
+    const tl = gsap.timeline();
+
+    tl.fromTo(
+      trans.current,
+      {
+        y: "100%",
       },
-    });
+      {
+        duration: 1,
+        y: 0,
+        ease: Power4.easeOut,
+      }
+    );
+
+    tl.to(
+      trans.current,
+      {
+        duration: 0.5,
+        opacity: 0,
+        ease: Power4.easeOut,
+      },
+    );
+
+    tl.set(trans.current, { display: "none" });
+
     const observer = new IntersectionObserver(
       ([entry]) => {
         if (!entry.isIntersecting) {
-          gsap.set(trans.current, { display: "none" });
+          tl.set(trans.current, { display: "none" });
           observer.disconnect();
         }
       },
       { threshold: 0 }
     );
+
     observer.observe(trans.current);
-  });
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+
   return (
     <div>
       <div className='transition-effect' ref={trans}></div>
     </div>
-  )
+  );
 }
-PageTransition.propTypes = {
-  timeline: PropTypes.object,
-};
 
-export default PageTransition
+export default PageTransition;
