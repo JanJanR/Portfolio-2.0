@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route} from "react-router-dom";
+import { BrowserRouter as Router, Routes, Route, useLocation} from "react-router-dom";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -10,10 +10,11 @@ import PhilCannes from "./pages/PhilCannes";
 import Walkin from "./pages/Walkin";
 
 const App = () => {
+  const location = useLocation();
   return (
     <Router>
-      <Routes>
-        <Route path="/" element={<Home />} />
+      <Routes location={location} key={location.pathname}>
+        <Route index element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/AirbroomNBroom" element={<AirbroomNBroom />} />

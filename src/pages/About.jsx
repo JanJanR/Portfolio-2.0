@@ -1,13 +1,13 @@
 import Navbar from "../components/Navbar"
-import PageTransition from "../components/PageTransition";
-import gsap from "gsap";
+// import PageTransition from "../components/PageTransition";
+// import gsap from "gsap";
 
 
 function About() {
-  const about = gsap.timeline();
+  // const about = gsap.timeline();
   return (
     <>
-    <PageTransition timeline={about}/>
+    {/* <PageTransition timeline={about}/> */}
       <Navbar />
       <div>About</div>
     </>

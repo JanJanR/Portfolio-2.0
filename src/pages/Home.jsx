@@ -25,9 +25,6 @@ import { useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import PageTransition from "../components/PageTransition";
-import gsap from "gsap";
-
 
 const images = [
   { src: PhilCannes, title: 'PhilCannes Detailing', description: 'website for a boat detailing services' },
@@ -51,11 +48,8 @@ function Home() {
     beforeChange: (current, next) => setImageIndex(next),
   }
 
-  const home = gsap.timeline();
-
   return (
     <>
-    <PageTransition timeline={home}/>
       <VantaBackground />
         <div className='slider-container'>
           <Marquee>
