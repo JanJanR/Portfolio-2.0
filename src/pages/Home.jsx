@@ -25,7 +25,7 @@ import { useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
-import MyPageTransition from "../components/MyPageTransition";
+import PageTransition from "../components/PageTransition";
 
 
 const images = [
@@ -51,7 +51,7 @@ function Home() {
   }
 
   return (
-    <MyPageTransition OgComponent={() => (
+    <PageTransition OgComponent={() => (
       <>
         <VantaBackground />
           <div className='slider-container'>

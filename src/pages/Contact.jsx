@@ -1,11 +1,11 @@
 import ContactMe from "../components/Contact";
 import Navbar from "../components/Navbar";
-import MyPageTransition from "../components/MyPageTransition";
+import PageTransition from "../components/PageTransition";
 import { motion } from "framer-motion";
 
 function Contact() {
   return (
-    <MyPageTransition OgComponent={() => (
+    <PageTransition OgComponent={() => (
       <>
         <Navbar />
         <motion.div

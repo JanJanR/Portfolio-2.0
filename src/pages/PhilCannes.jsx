@@ -1,9 +1,9 @@
 import Navbar from "../components/Navbar";
-import MyPageTransition from "../components/MyPageTransition";
+import PageTransition from "../components/PageTransition";
 
 function PhilCannes() {
   return (
-    <MyPageTransition OgComponent={() => (
+    <PageTransition OgComponent={() => (
       <>
         <Navbar/>
         <div>PhilCannes</div>
