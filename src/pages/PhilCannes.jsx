@@ -1,16 +1,14 @@
 import Navbar from "../components/Navbar";
-// import PageTransition from "../components/PageTransition";
-// import gsap from "gsap";
-
+import MyPageTransition from "../components/MyPageTransition";
 
 function PhilCannes() {
-  // const project4 = gsap.timeline();
   return (
-    <>
-      {/* <PageTransition timeline={project4}/> */}
-      <Navbar/>
-      <div>PhilCannes</div>
-    </>
+    <MyPageTransition OgComponent={() => (
+      <>
+        <Navbar/>
+        <div>PhilCannes</div>
+      </>
+    )}/>
   )
 }
 

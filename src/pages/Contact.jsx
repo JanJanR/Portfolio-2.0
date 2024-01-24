@@ -1,17 +1,27 @@
 import ContactMe from "../components/Contact";
 import Navbar from "../components/Navbar";
-// import PageTransition from "../components/PageTransition";
-// import gsap from "gsap";
+import MyPageTransition from "../components/MyPageTransition";
+import { motion } from "framer-motion";
 
 function Contact() {
-  // const contact = gsap.timeline();
   return (
-    <>
-      {/* <PageTransition timeline={contact}/> */}
+    <MyPageTransition OgComponent={() => (
+      <>
         <Navbar />
-        <ContactMe />
-    </>
-  )
+        <motion.div
+          variants={{
+            hidden: {opacity: 0, y: 100},
+            visible: {opacity: 1, y: 0}
+          }}
+          initial='hidden'
+          animate='visible'
+          transition={{duration: 1}}
+        >
+          <ContactMe />
+        </motion.div>
+      </>
+    )} />
+  );
 }
 
-export default Contact
+export default Contact;

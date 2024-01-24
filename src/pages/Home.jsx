@@ -25,6 +25,8 @@ import { useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import MyPageTransition from "../components/MyPageTransition";
+
 
 const images = [
   { src: PhilCannes, title: 'PhilCannes Detailing', description: 'website for a boat detailing services' },
@@ -49,61 +51,63 @@ function Home() {
   }
 
   return (
-    <>
-      <VantaBackground />
-        <div className='slider-container'>
-          <Marquee>
-            <div className='stack-slider'>
-              <div className='img-container'>
-                <img src={Ruby} alt="ruby" loading="lazy" />
-              </div>
-              <div className='img-container'>
-                <img src={Rails} alt="rails" loading="lazy"/>
-              </div>
-              <div className='img-container'>
-                <img src={React} alt="react" loading="lazy"/>
-              </div>
-              <div className='img-container'>
-                <img src={Firebase} alt="firebase" loading="lazy"/>
-              </div>
-              <div className='img-container'>
-                <img src={Html} alt="html"loading="lazy" />
-              </div>
-              <div className='img-container'>
-                <img src={Css} alt="css" loading="lazy"/>
-              </div>
-              <div className='img-container'>
-                <img src={Javascript} alt="javascript"loading="lazy" />
-              </div>
-              <div className='img-container'>
-                <img src={Figma} alt="figma" loading="lazy"/>
-              </div>
-              <div className='img-container'>
-                <img src={Vercel} alt="vercel"loading="lazy" />
-              </div>
-            </div>
-          </Marquee>
-        </div>
-      <div className='carousel-slider'>
-        <div className="work-title">
-          <h1>Works</h1>
-        </div>
-        <Slider {...settings}>
-          {images.map((image, index) => (
-            <div key={index} className={index === imageIndex ? "slide activeSlide" : "slide"}>
-              <img src={image.src} alt={image.title} />
-              {index === imageIndex && (
-                <div className="slide-content">
-                  <h1>{image.title}</h1>
-                  <p>{image.description}</p>
+    <MyPageTransition OgComponent={() => (
+      <>
+        <VantaBackground />
+          <div className='slider-container'>
+            <Marquee>
+              <div className='stack-slider'>
+                <div className='img-container'>
+                  <img src={Ruby} alt="ruby" loading="lazy" />
                 </div>
-              )}
-            </div>
-          ))}
-        </Slider>
-      </div>
-      <Contact />
-    </>
+                <div className='img-container'>
+                  <img src={Rails} alt="rails" loading="lazy"/>
+                </div>
+                <div className='img-container'>
+                  <img src={React} alt="react" loading="lazy"/>
+                </div>
+                <div className='img-container'>
+                  <img src={Firebase} alt="firebase" loading="lazy"/>
+                </div>
+                <div className='img-container'>
+                  <img src={Html} alt="html"loading="lazy" />
+                </div>
+                <div className='img-container'>
+                  <img src={Css} alt="css" loading="lazy"/>
+                </div>
+                <div className='img-container'>
+                  <img src={Javascript} alt="javascript"loading="lazy" />
+                </div>
+                <div className='img-container'>
+                  <img src={Figma} alt="figma" loading="lazy"/>
+                </div>
+                <div className='img-container'>
+                  <img src={Vercel} alt="vercel"loading="lazy" />
+                </div>
+              </div>
+            </Marquee>
+          </div>
+        <div className='carousel-slider'>
+          <div className="work-title">
+            <h1>Works</h1>
+          </div>
+          <Slider {...settings}>
+            {images.map((image, index) => (
+              <div key={index} className={index === imageIndex ? "slide activeSlide" : "slide"}>
+                <img src={image.src} alt={image.title} />
+                {index === imageIndex && (
+                  <div className="slide-content">
+                    <h1>{image.title}</h1>
+                    <p>{image.description}</p>
+                  </div>
+                )}
+              </div>
+            ))}
+          </Slider>
+        </div>
+        <Contact />
+      </>
+    )}/>
   )
 }
 

@@ -68,11 +68,11 @@ function Navbar() {
               transition={{ duration: 1.5 }}
             >
               <div className="projects-tab">
-                <Link to='/PhilCannes'><h1>PhilCannes Detailing</h1></Link>
-                <Link to='/CartePub'><h1>CartePub</h1></Link>
-                <Link to='/CindyKawak'><h1>CindyKawak</h1></Link>
-                <Link to='/Walkin'><h1>WalkIn</h1></Link>
-                <Link to='/AirbroomNBroom'><h1>AirBroomNBroom</h1></Link>
+                <Link to='projects/PhilCannes'><h1>PhilCannes Detailing</h1></Link>
+                <Link to='projects/CartePub'><h1>CartePub</h1></Link>
+                <Link to='projects/CindyKawak'><h1>CindyKawak</h1></Link>
+                <Link to='projects/Walkin'><h1>WalkIn</h1></Link>
+                <Link to='projects/AirbroomNBroom'><h1>AirBroomNBroom</h1></Link>
               </div>
             </motion.div>
           </Modal>

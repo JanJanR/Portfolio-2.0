@@ -1,15 +1,14 @@
 import Navbar from "../components/Navbar";
-// import PageTransition from "../components/PageTransition";
-// import gsap from "gsap";
+import MyPageTransition from "../components/MyPageTransition";
 
 function Walkin() {
-  // const project5 = gsap.timeline();
   return (
-    <>
-      {/* <PageTransition timeline={project5}/> */}
-      <Navbar/>
-      <div>Walkin</div>
-    </>
+    <MyPageTransition OgComponent={() => (
+      <>
+        <Navbar/>
+        <div>Walkin</div>
+      </>
+    )}/>
   )
 }
 

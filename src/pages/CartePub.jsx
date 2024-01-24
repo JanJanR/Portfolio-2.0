@@ -1,16 +1,14 @@
 import Navbar from "../components/Navbar";
-// import PageTransition from "../components/PageTransition";
-// import gsap from "gsap";
-
+import MyPageTransition from "../components/MyPageTransition";
 
 function CartePub() {
-  // const project2 = gsap.timeline();
   return (
-    <>
-      {/* <PageTransition timeline={project2}/> */}
-      <Navbar/>
-      <div>CartePub</div>
-    </>
+    <MyPageTransition OgComponent={() => (
+      <>
+        <Navbar/>
+        <div>CartePub</div>
+      </>
+    )}/>
   )
 }
 

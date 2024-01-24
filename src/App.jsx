@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Routes, Route, useLocation} from "react-router-dom";
+import { Routes, Route, useLocation} from "react-router-dom";
 
 import Home from "./pages/Home";
 import About from "./pages/About";
@@ -12,18 +12,16 @@ import Walkin from "./pages/Walkin";
 const App = () => {
   const location = useLocation();
   return (
-    <Router>
-      <Routes location={location} key={location.pathname}>
-        <Route index element={<Home />} />
-        <Route path="/about" element={<About />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/AirbroomNBroom" element={<AirbroomNBroom />} />
-        <Route path="/CartePub" element={<CartePub />} />
-        <Route path="/CindyKawak" element={<CindyKawak />} />
-        <Route path="/PhilCannes" element={<PhilCannes />} />
-        <Route path="/Walkin" element={<Walkin />} />
-      </Routes>
-    </Router>
+    <Routes location={location} key={location.pathname}>
+      <Route index element={<Home />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/contact" element={<Contact />} />
+      <Route path="projects/AirbroomNBroom" element={<AirbroomNBroom />} />
+      <Route path="projects/CartePub" element={<CartePub />} />
+      <Route path="projects/CindyKawak" element={<CindyKawak />} />
+      <Route path="projects/PhilCannes" element={<PhilCannes />} />
+      <Route path="projects/Walkin" element={<Walkin />} />
+    </Routes>
   );
 };
 
