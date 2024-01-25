@@ -17,11 +17,29 @@ function Hero() {
   };
 
   const tl = gsap.timeline();
-  const heroRef = useRef(null);
+  const heroNameRef = useRef(null);
+  const heroDescriptionRef = useRef(null);
+  const heroLottieRef = useRef(null);
 
   useGSAP (() => {
-    tl.fromTo(heroRef.current,{
-      y: 200
+    tl.fromTo(heroNameRef.current,{
+      y: -2000,
+    },
+    {
+      y: 0,
+      ease: "none"
+    })
+
+    tl.fromTo(heroDescriptionRef.current,{
+      x: 2000,
+    },
+    {
+      x: 0,
+      ease: "none"
+    })
+
+    tl.fromTo(heroLottieRef.current,{
+      y: 2000,
     },
     {
       y: 0,
@@ -30,14 +48,14 @@ function Hero() {
   })
 
   return (
-    <div className="hero-container" ref={heroRef}>
-      <div className="hero-name">
+    <div className="hero-container">
+      <div className="hero-name" ref={heroNameRef}>
         <h1>John Romero</h1>
       </div>
-      <div className='hero-description'>
+      <div className='hero-description' ref={heroDescriptionRef}>
         <h2>a full stack developer</h2>
       </div>
-      <div className='scroll-lottie'>
+      <div className='scroll-lottie' ref={heroLottieRef}>
         <Lottie
           options={defaultOptions}
           height={80}
