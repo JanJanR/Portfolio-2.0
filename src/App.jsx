@@ -13,14 +13,14 @@ const App = () => {
   const location = useLocation();
   return (
     <Routes location={location} key={location.pathname}>
-      <Route index element={<Home />} />
+      <Route path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/contact" element={<Contact />} />
-      <Route path="projects/AirbroomNBroom" element={<AirbroomNBroom />} />
-      <Route path="projects/CartePub" element={<CartePub />} />
-      <Route path="projects/CindyKawak" element={<CindyKawak />} />
-      <Route path="projects/PhilCannes" element={<PhilCannes />} />
-      <Route path="projects/Walkin" element={<Walkin />} />
+      <Route path="/projects/AirbroomNBroom" element={<AirbroomNBroom />} />
+      <Route path="/projects/CartePub" element={<CartePub />} />
+      <Route path="/projects/CindyKawak" element={<CindyKawak />} />
+      <Route path="/projects/PhilCannes" element={<PhilCannes />} />
+      <Route path="/projects/Walkin" element={<Walkin />} />
     </Routes>
   );
 };
