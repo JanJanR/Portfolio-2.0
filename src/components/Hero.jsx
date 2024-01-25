@@ -1,6 +1,8 @@
+import { useRef, useEffect } from "react";
 import '../styles/Hero.css'
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/scrolldown.json";
+import gsap from "gsap";
 
 function Hero() {
   const defaultOptions = {
@@ -12,8 +14,24 @@ function Hero() {
     }
   };
 
+  const heroRef = useRef(null);
+
+  useEffect(() => {
+    gsap.fromTo(heroRef.current, {
+      x: -2000,
+      delay: 0.2,
+      duration: 1
+    },
+    {
+      x: 0,
+      delay: 0.2,
+      duration: 1
+    }
+    )
+  })
+
   return (
-    <div className="hero-container">
+    <div ref={heroRef} className="hero-container">
       <div className="hero-name">
         <h1>John Romero</h1>
       </div>
