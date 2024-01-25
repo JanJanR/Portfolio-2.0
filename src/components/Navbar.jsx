@@ -1,15 +1,19 @@
 import "../styles/Navbar.css";
-import Logo from "../assets/logo.png"
-import Modal from 'react-modal';
-import { useState, useEffect } from "react";
-import { IconX } from '@tabler/icons-react';
-import { motion } from 'framer-motion';
 import { Link } from "react-router-dom";
+import { useState, useEffect, useRef } from "react";
+import Modal from 'react-modal';
+
+import Logo from "../assets/logo.png"
+import { IconX } from '@tabler/icons-react';
+
+import { motion } from 'framer-motion';
+
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
 
 function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
-
 
   const openModal = () => {
     setIsModalOpen(true);
@@ -30,17 +34,58 @@ function Navbar() {
     };
   }, [isModalOpen]);
 
+  const tl = gsap.timeline();
+  const logoRef = useRef(null);
+  const projectsRef = useRef(null);
+  const aboutRef = useRef(null);
+  const contactRef = useRef(null);
+
+  useGSAP (() => {
+    tl.fromTo(logoRef.current,{
+      y: -200
+    },
+    {
+      y: 0,
+      ease: "none"
+    })
+
+    tl.fromTo(projectsRef.current,{
+      y: -200
+    },
+    {
+      y: 0,
+      ease: "none"
+    })
+
+    tl.fromTo(aboutRef.current,{
+      y: -200
+    },
+    {
+      y: 0,
+      ease: "none"
+    })
+
+    tl.fromTo(contactRef.current,{
+      y: -200
+    },
+    {
+      y: 0,
+      ease: "none"
+    })
+  })
+
+
   return (
     <div className="navbar-container">
-      <Link to='/'><img src={Logo} alt="logo" className="logo"/></Link>
+      <Link to='/'><img src={Logo} alt="logo" className="logo" ref={logoRef} /></Link>
       <div className="navbar-item">
-        <div className="navbar-projects" onClick={openModal}>
+        <div className="navbar-projects" onClick={openModal} ref={projectsRef}>
           <h3>Projects</h3>
         </div>
-        <div className="navbar-about">
+        <div className="navbar-about" ref={aboutRef}>
           <Link to='/about'><h3>About</h3></Link>
         </div>
-        <Link to='/contact'>
+        <Link to='/contact' ref={contactRef}>
           <button className="navbar-contact">
             <h3>Contact Me</h3>
           </button>
