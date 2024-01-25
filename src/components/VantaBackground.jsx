@@ -30,11 +30,11 @@ function VantaBackground() {
   return (
     <>
      <div id="vanta" className="bg">
-      <Navbar />
+      <Navbar animate={false}/>
       <Hero />
      </div>
     </>
   )
 }
 
-export default VantaBackground
+export default VantaBackground;

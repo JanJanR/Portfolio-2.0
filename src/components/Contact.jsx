@@ -7,6 +7,9 @@ import { IconBrandLinkedin } from '@tabler/icons-react';
 import emailjs from '@emailjs/browser';
 import { useRef } from "react";
 
+import { useGSAP } from "@gsap/react";
+import gsap from "gsap";
+
 function Contact() {
 
   const form = useRef();
@@ -29,36 +32,94 @@ function Contact() {
       });
   };
 
+  const tl = gsap.timeline();
+  const contactTitleRef = useRef(null);
+  const contactDescriptionRef = useRef(null);
+  const contactFormRef = useRef(null);
+  const contactGithubRef = useRef(null);
+  const contactMailRef = useRef(null);
+  const contactLinkedinlRef = useRef(null);
+
+  useGSAP (() => {
+    tl.fromTo(contactTitleRef.current,{
+      x: -1000
+    },
+    {
+      x: 0,
+      ease: "none"
+    })
+
+    tl.fromTo(contactDescriptionRef.current,{
+      x: -1000
+    },
+    {
+      x: 0,
+      ease: "none"
+    })
+
+    tl.fromTo(contactFormRef.current,{
+      x: 1000
+    },
+    {
+      x: 0,
+      ease: "none"
+    })
+
+    tl.fromTo(contactGithubRef.current,{
+      y: 2000
+    },
+    {
+      y: 0,
+      ease: "none"
+    })
+
+    tl.fromTo(contactMailRef.current,{
+      y: 2000
+    },
+    {
+      y: 0,
+      ease: "none"
+    })
+
+    tl.fromTo(contactLinkedinlRef.current,{
+      y: 2000
+    },
+    {
+      y: 0,
+      ease: "none"
+    })
+  })
+
   return (
     <>
       <div className="contact-container">
-        <div className="contact-title">
+        <div className="contact-title" ref={contactTitleRef}>
           <h1>Contact</h1>
         </div>
         <div className="contact-content">
           <div className="left-contact">
-            <div className="contact-description">
+            <div className="contact-description" ref={contactDescriptionRef}>
               <h2>Got an <b>opportunity</b>, or just want to say Hello ? <br/>Feel free to reach me out.</h2>
             </div>
             <div className="contact-social-media">
-              <div className="github">
+              <div className="github" ref={contactGithubRef}>
                 <a href="https://github.com/JanJanR" target="_blank" rel="noopener noreferrer">
                   <IconBrandGithub size={70} stroke={0.5} id="github"/>
                 </a>
               </div>
-              <div className="mail">
+              <div className="mail" ref={contactMailRef}>
                 <a href="mailto:romerojohn1012@gmail.com">
                   <IconMail size={70} stroke={0.5} id="mail"/>
                 </a>
               </div>
-              <div className="linkedin">
+              <div className="linkedin" ref={contactLinkedinlRef}>
                 <a href="https://www.linkedin.com/in/john-romero-272b22256/" target="_blank" rel="noopener noreferrer">
                   <IconBrandLinkedin size={70} stroke={0.5} id="linkedin"/>
                 </a>
               </div>
             </div>
           </div>
-          <div className="right-contact">
+          <div className="right-contact" ref={contactFormRef}>
             <form ref={form} onSubmit={sendEmail}>
               <h1>send me an email</h1>
               <label><h2>Name</h2></label>
