@@ -30,7 +30,7 @@ function VantaBackground() {
   return (
     <>
      <div id="vanta" className="bg">
-      <Navbar animate={false}/>
+      <Navbar animate/>
       <Hero />
      </div>
     </>

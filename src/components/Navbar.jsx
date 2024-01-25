@@ -44,7 +44,7 @@ function Navbar({animate = true}) {
   useGSAP (() => {
     if (animate) {
       tl.fromTo(logoRef.current,{
-        y: -200
+        y: -105
       },
       {
         y: 0,
@@ -52,7 +52,7 @@ function Navbar({animate = true}) {
       })
 
       tl.fromTo(projectsRef.current,{
-        y: -200
+        y: -105
       },
       {
         y: 0,
@@ -60,7 +60,7 @@ function Navbar({animate = true}) {
       })
 
       tl.fromTo(aboutRef.current,{
-        y: -200
+        y: -105
       },
       {
         y: 0,
@@ -68,7 +68,7 @@ function Navbar({animate = true}) {
       })
 
       tl.fromTo(contactRef.current,{
-        y: -200
+        y: -105
       },
       {
         y: 0,
@@ -87,8 +87,8 @@ function Navbar({animate = true}) {
         <div className="navbar-about" ref={aboutRef}>
           <Link to='/about'><h3>About</h3></Link>
         </div>
-        <Link to='/contact' ref={contactRef}>
-          <button className="navbar-contact">
+        <Link to='/contact'>
+          <button className="navbar-contact" ref={contactRef}>
             <h3>Contact Me</h3>
           </button>
         </Link>
