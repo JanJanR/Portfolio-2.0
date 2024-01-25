@@ -25,13 +25,14 @@ import { useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import { Link } from "react-router-dom";
 
 const images = [
-  { src: PhilCannes, title: 'PhilCannes Detailing', description: 'website for a boat detailing services' },
-  { src: CartePub, title: 'CartePub', description: 'an app for digital advertisement' },
-  { src: Walkin, title: 'WalkIn', description: 'mobile app that helps people to find a table for tonight to make a reservation' },
-  { src: AirBroomNBroom, title: 'AirBroom N Broom', description: '(AirBnB clone) is a market place for broomstick rental' },
-  { src: CindyKawak, title: 'Cindy Kawak', description: 'website to download an E-Book' },
+  { src: PhilCannes, title: 'PhilCannes Detailing', description: 'website for a boat detailing services', link: "/projects/PhilCannes" },
+  { src: CartePub, title: 'CartePub', description: 'an app for digital advertisement', link: "/projects/CartePub"},
+  { src: Walkin, title: 'WalkIn', description: 'mobile app that helps people to find a table for tonight to make a reservation', link: "/projects/Walkin" },
+  { src: AirBroomNBroom, title: 'AirBroom N Broom', description: '(AirBnB clone) is a market place for broomstick rental', link: "/projects/AirbroomNBroom" },
+  { src: CindyKawak, title: 'Cindy Kawak', description: 'website to download an E-Book', link: "/projects/CindyKawak" },
 ]
 
 function Home() {
@@ -93,10 +94,10 @@ function Home() {
             <div key={index} className={index === imageIndex ? "slide activeSlide" : "slide"}>
               <img src={image.src} alt={image.title} />
               {index === imageIndex && (
-                <div className="slide-content">
+                <Link to={image.link} className="slide-content">
                   <h1>{image.title}</h1>
                   <p>{image.description}</p>
-                </div>
+                </Link>
               )}
             </div>
           ))}
