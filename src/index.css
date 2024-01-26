@@ -24,11 +24,12 @@ body{
 
 h1 {
   font-family: 'Syncopate', sans-serif;
+  margin: 0;
 }
 
 h2 {
   font-family: 'Taviraj', serif;
-  text-align: end;
+  margin: 0;
 }
 
 h3 {

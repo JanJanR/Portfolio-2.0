@@ -6,6 +6,7 @@ import animationData from "../assets/lottie/scrolldown.json";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
+
 function Hero() {
   const defaultOptions = {
     loop: true,
@@ -17,21 +18,12 @@ function Hero() {
   };
 
   const tl = gsap.timeline();
-  const heroNameRef = useRef(null);
   const heroDescriptionRef = useRef(null);
   const heroLottieRef = useRef(null);
 
   useGSAP (() => {
-    tl.fromTo(heroNameRef.current,{
-      y: -2000,
-    },
-    {
-      y: 0,
-      ease: "none"
-    })
-
     tl.fromTo(heroDescriptionRef.current,{
-      x: 2000,
+      x: 600,
     },
     {
       x: 0,
@@ -39,18 +31,20 @@ function Hero() {
     })
 
     tl.fromTo(heroLottieRef.current,{
-      y: 2000,
+      opacity: 0,
     },
     {
-      y: 0,
-      ease: "none"
+      opacity: 1,
+      duration: 3.5
     })
   })
 
   return (
     <div className="hero-container">
-      <div className="hero-name" ref={heroNameRef}>
-        <h1>John Romero</h1>
+      <div className="hero-name">
+        <div><h1>John</h1></div>
+        {/* <div className="box"></div> */}
+        <h1>Romero</h1>
       </div>
       <div className='hero-description' ref={heroDescriptionRef}>
         <h2>a full stack developer</h2>

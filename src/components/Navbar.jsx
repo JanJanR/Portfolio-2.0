@@ -81,15 +81,15 @@ function Navbar({animate = true}) {
     <div className="navbar-container">
       <Link to='/'><img src={Logo} alt="logo" className="logo" ref={logoRef} /></Link>
       <div className="navbar-item">
-        <div className="navbar-projects" onClick={openModal} ref={projectsRef}>
-          <h3>Projects</h3>
+        <div className="navbar-projects" onClick={openModal} >
+          <h3 ref={projectsRef}>Projects</h3>
         </div>
-        <div className="navbar-about" ref={aboutRef}>
-          <Link to='/about'><h3>About</h3></Link>
+        <div className="navbar-about">
+          <Link to='/about'><h3 ref={aboutRef}>About</h3></Link>
         </div>
-        <Link to='/contact' ref={contactRef}>
+        <Link to='/contact'>
           <button className="navbar-contact" ref={contactRef}>
-            <h3>Contact Me</h3>
+            <h3 ref={contactRef}>Contact Me</h3>
           </button>
         </Link>
       </div>

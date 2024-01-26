@@ -66,7 +66,7 @@ function Contact() {
     })
 
     tl.fromTo(contactGithubRef.current,{
-      y: 2000
+      y: 200
     },
     {
       y: 0,
@@ -74,7 +74,7 @@ function Contact() {
     })
 
     tl.fromTo(contactMailRef.current,{
-      y: 2000
+      y: 200
     },
     {
       y: 0,
@@ -82,7 +82,7 @@ function Contact() {
     })
 
     tl.fromTo(contactLinkedinlRef.current,{
-      y: 2000
+      y: 200
     },
     {
       y: 0,
