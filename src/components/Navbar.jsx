@@ -87,7 +87,7 @@ function Navbar({animate = true}) {
         <div className="navbar-about" ref={aboutRef}>
           <Link to='/about'><h3>About</h3></Link>
         </div>
-        <Link to='/contact'>
+        <Link to='/contact' ref={contactRef}>
           <button className="navbar-contact" ref={contactRef}>
             <h3>Contact Me</h3>
           </button>
