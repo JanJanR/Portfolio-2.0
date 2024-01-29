@@ -20,10 +20,6 @@ import PhilCannes from "../assets/slider/PhilCannes Detailing.png";
 import Walkin from "../assets/slider/Walkin.png";
 
 import Marquee from "react-fast-marquee";
-import Slider from "react-slick";
-import { useState } from 'react';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
@@ -33,7 +29,7 @@ import 'swiper/css/pagination';
 
 
 
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const images = [
   { src: PhilCannes, title: 'PhilCannes Detailing', description: 'website for a boat detailing services', link: "/projects/PhilCannes" },
@@ -44,18 +40,6 @@ const images = [
 ]
 
 function Home() {
-
-  const [imageIndex, setImageIndex] = useState(0)
-
-  const settings = {
-    infinite: true,
-    lazyLoad: true,
-    speed: 300,
-    slidesToShow: 3,
-    centerMode: true,
-    centerPadding: 0,
-    beforeChange: (current, next) => setImageIndex(next),
-  }
 
   return (
     <>
@@ -93,45 +77,39 @@ function Home() {
             </div>
           </Marquee>
         </div>
-      <div className='carousel-slider'>
+      <div className='carousel-swiper'>
         <div className="work-title">
           <h1>Works</h1>
         </div>
         <Swiper
-        effect={'coverflow'}
-        grabCursor={true}
-        centeredSlides={true}
-        slidesPerView={"auto"}
-        coverflowEffect={{
-          rotate: 0,
-          stretch: 0,
-          depth: 500,
-          modifier: 1,
-          slideShadows: true,
-        }}
-        pagination={true}
-        modules={[EffectCoverflow, Pagination]}
-        initialSlide={2}
-        className="mySwiper"
-      >
-        <SwiperSlide>
-          <img src={AirBroomNBroom}/>
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={PhilCannes} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={Walkin} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={CartePub} />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img src={CindyKawak} />
-        </SwiperSlide>
+          effect={'coverflow'}
+          grabCursor={true}
+          centeredSlides={true}
+          slidesPerView={"auto"}
+          coverflowEffect={{
+            rotate: 0,
+            stretch: 0,
+            depth: 600,
+            modifier: 1,
+            slideShadows: false,
+          }}
+          pagination={true}
+          modules={[EffectCoverflow, Pagination]}
+          initialSlide={2}
+          className="mySwiper"
+        >
+        {images.map((image, index) => (
+          <SwiperSlide key={index}>
+            <img src={image.src} alt={`Slide ${index + 1}`} />
+            <div className='swiper-content'>
+              <h1>{image.title}</h1>
+              <p>{image.description}</p>
+            </div>
+          </SwiperSlide>
+        ))}
       </Swiper>
       </div>
-      {/* <Contact /> */}
+      <Contact />
     </>
   )
 }
@@ -144,8 +122,8 @@ export default Home
 //   <img src={image.src} alt={image.title} />
 //   {index === imageIndex && (
 //     <Link to={image.link} className="slide-content">
-//     <h1>{image.title}</h1>
-//     <p>{image.description}</p>
+    // <h1>{image.title}</h1>
+    // <p>{image.description}</p>
 //     </Link>
 //     )}
 //     </div>
