@@ -2,7 +2,6 @@ import "../styles/Navbar.css";
 import { Link } from "react-router-dom";
 import { useState, useEffect, useRef } from "react";
 import Modal from 'react-modal';
-import PropTypes from 'prop-types';
 
 import Logo from "../assets/logo.png"
 import { IconX } from '@tabler/icons-react';
@@ -12,7 +11,7 @@ import { motion } from 'framer-motion';
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
 
-function Navbar({animate = true}) {
+function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
   const [isClosing, setIsClosing] = useState(false);
 
@@ -42,39 +41,37 @@ function Navbar({animate = true}) {
   const contactRef = useRef(null);
 
   useGSAP (() => {
-    if (animate) {
-      tl.fromTo(logoRef.current,{
-        y: -105
-      },
-      {
-        y: 0,
-        ease: "none"
-      })
+    tl.fromTo(logoRef.current,{
+      y: -105
+    },
+    {
+      y: 0,
+      ease: "none"
+    })
 
-      tl.fromTo(projectsRef.current,{
-        y: -105
-      },
-      {
-        y: 0,
-        ease: "none"
-      })
+    tl.fromTo(projectsRef.current,{
+      y: -105
+    },
+    {
+      y: 0,
+      ease: "none"
+    })
 
-      tl.fromTo(aboutRef.current,{
-        y: -105
-      },
-      {
-        y: 0,
-        ease: "none"
-      })
+    tl.fromTo(aboutRef.current,{
+      y: -105
+    },
+    {
+      y: 0,
+      ease: "none"
+    })
 
-      tl.fromTo(contactRef.current,{
-        y: -105
-      },
-      {
-        y: 0,
-        ease: "none"
-      })
-    }
+    tl.fromTo(contactRef.current,{
+      y: -105
+    },
+    {
+      y: 0,
+      ease: "none"
+    })
   })
 
   return (
@@ -127,9 +124,4 @@ function Navbar({animate = true}) {
     </div>
   )
 }
-
-Navbar.propTypes = {
-  animate: PropTypes.bool.isRequired,
-};
-
 export default Navbar

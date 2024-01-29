@@ -3,10 +3,29 @@
   text-align: center;
 }
 
-.hero-name h1{
+.hero-name-container {
+  clip-path: polygon(20% 100%, 20% 0, 68% 0, 68% 50%, 87% 50%, 87% 100%);
+}
+
+.hero-name-container h1{
   line-height: normal;
   margin: 0;
   font-size: 200px;
+}
+
+.hero-name,
+.hero-lastname{
+  position: relative;
+  display: inline-block;
+}
+
+.box-name,
+.box-lastname {
+  position: absolute;
+  background: #E4DEBE;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
 }
 
 
