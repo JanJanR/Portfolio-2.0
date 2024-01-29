@@ -25,6 +25,14 @@ import { useState } from 'react';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css';
+import 'swiper/css/effect-coverflow';
+import 'swiper/css/pagination';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
+
+
+
 import { Link } from "react-router-dom";
 
 const images = [
@@ -89,19 +97,38 @@ function Home() {
         <div className="work-title">
           <h1>Works</h1>
         </div>
-        <Slider {...settings}>
-          {images.map((image, index) => (
-            <div key={index} className={index === imageIndex ? "slide activeSlide" : "slide"}>
-              <img src={image.src} alt={image.title} />
-              {index === imageIndex && (
-                <Link to={image.link} className="slide-content">
-                  <h1>{image.title}</h1>
-                  <p>{image.description}</p>
-                </Link>
-              )}
-            </div>
-          ))}
-        </Slider>
+        <Swiper
+        effect={'coverflow'}
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView={'auto'}
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 500,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        pagination={true}
+        modules={[EffectCoverflow, Pagination]}
+        className="mySwiper"
+      >
+        <SwiperSlide>
+          <img src={AirBroomNBroom}/>
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={PhilCannes} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={Walkin} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={CartePub} />
+        </SwiperSlide>
+        <SwiperSlide>
+          <img src={CindyKawak} />
+        </SwiperSlide>
+      </Swiper>
       </div>
       <Contact />
     </>
@@ -109,3 +136,17 @@ function Home() {
 }
 
 export default Home
+
+// {/* <Slider {...settings}>
+//           {images.map((image, index) => (
+//             <div key={index} className={index === imageIndex ? "slide activeSlide" : "slide"}>
+//               <img src={image.src} alt={image.title} />
+//               {index === imageIndex && (
+//                 <Link to={image.link} className="slide-content">
+//                   <h1>{image.title}</h1>
+//                   <p>{image.description}</p>
+//                 </Link>
+//               )}
+//             </div>
+//           ))}
+//         </Slider> */}

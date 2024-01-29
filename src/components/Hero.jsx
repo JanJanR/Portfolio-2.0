@@ -43,11 +43,11 @@ function Hero() {
     })
 
     tl.fromTo(heroDescriptionRef.current,{
-      x: 600,
+      opacity: 0
     },
     {
-      x: 0,
-      ease: "none"
+      opacity: 1,
+      duration: 1
     })
 
     tl.fromTo(heroLottieRef.current,{
@@ -55,7 +55,7 @@ function Hero() {
     },
     {
       opacity: 1,
-      duration: 3.5
+      duration: 1.5
     })
   })
 
