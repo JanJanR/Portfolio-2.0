@@ -28,7 +28,7 @@ function Hero() {
       x: 0,
     },
     {
-      x: 1000,
+      x: '-150%',
       ease: "none",
       duration: 1
     })
@@ -37,7 +37,7 @@ function Hero() {
       x: 0,
     },
     {
-      x: -1500,
+      x: '-150%',
       ease: "none",
       duration: 1
     })

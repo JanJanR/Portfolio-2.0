@@ -26,10 +26,10 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 
 import { Swiper, SwiperSlide } from 'swiper/react';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
-import { EffectCoverflow, Pagination } from 'swiper/modules';
 
 
 
@@ -101,7 +101,7 @@ function Home() {
         effect={'coverflow'}
         grabCursor={true}
         centeredSlides={true}
-        slidesPerView={'auto'}
+        slidesPerView={"auto"}
         coverflowEffect={{
           rotate: 0,
           stretch: 0,
@@ -111,6 +111,7 @@ function Home() {
         }}
         pagination={true}
         modules={[EffectCoverflow, Pagination]}
+        initialSlide={2}
         className="mySwiper"
       >
         <SwiperSlide>
@@ -130,7 +131,7 @@ function Home() {
         </SwiperSlide>
       </Swiper>
       </div>
-      <Contact />
+      {/* <Contact /> */}
     </>
   )
 }
@@ -138,15 +139,15 @@ function Home() {
 export default Home
 
 // {/* <Slider {...settings}>
-//           {images.map((image, index) => (
-//             <div key={index} className={index === imageIndex ? "slide activeSlide" : "slide"}>
-//               <img src={image.src} alt={image.title} />
-//               {index === imageIndex && (
-//                 <Link to={image.link} className="slide-content">
-//                   <h1>{image.title}</h1>
-//                   <p>{image.description}</p>
-//                 </Link>
-//               )}
-//             </div>
-//           ))}
-//         </Slider> */}
+// {images.map((image, index) => (
+//   <div key={index} className={index === imageIndex ? "slide activeSlide" : "slide"}>
+//   <img src={image.src} alt={image.title} />
+//   {index === imageIndex && (
+//     <Link to={image.link} className="slide-content">
+//     <h1>{image.title}</h1>
+//     <p>{image.description}</p>
+//     </Link>
+//     )}
+//     </div>
+//     ))}
+//   </Slider> */}
