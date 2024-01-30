@@ -30,11 +30,11 @@ import 'swiper/css/pagination';
 // import { Link } from "react-router-dom";
 
 const images = [
-  { src: PhilCannes, title: 'PhilCannes Detailing', description: 'website for a boat detailing services', link: "/projects/PhilCannes" },
-  { src: CartePub, title: 'CartePub', description: 'an app for digital advertisement', link: "/projects/CartePub"},
   { src: Walkin, title: 'WalkIn', description: 'mobile app that helps people to find a table for tonight to make a reservation', link: "/projects/Walkin" },
-  { src: AirBroomNBroom, title: 'AirBroom N Broom', description: '(AirBnB clone) is a market place for broomstick rental', link: "/projects/AirbroomNBroom" },
+  { src: CartePub, title: 'CartePub', description: 'an app for digital advertisement', link: "/projects/CartePub"},
+  { src: PhilCannes, title: 'PhilCannes Detailing', description: 'website for a boat detailing services', link: "/projects/PhilCannes" },
   { src: CindyKawak, title: 'Cindy Kawak', description: 'website to download an E-Book', link: "/projects/CindyKawak" },
+  { src: AirBroomNBroom, title: 'AirBroom N Broom', description: '(AirBnB clone) is a market place for broomstick rental', link: "/projects/AirbroomNBroom" },
 ]
 
 const imagesMarquee = [

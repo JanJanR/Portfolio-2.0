@@ -58,10 +58,11 @@ function Contact() {
     })
 
     tl.fromTo(contactFormRef.current,{
-      x: 1000
+      opacity: 0
     },
     {
-      x: 0,
+      opacity: 1,
+      duration: 1,
       ease: "none"
     })
 
