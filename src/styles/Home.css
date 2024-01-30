@@ -1,6 +1,5 @@
 .slider-container {
   background-color: #E4DEBE;
-  margin-bottom: 150px;
 }
 
 .stack-slider {
@@ -31,9 +30,8 @@
 
 .carousel-swiper {
   width: 100%;
-  margin: 10rem auto;
   height: 70%;
-  margin-bottom: 4rem;
+  padding: 5rem 0 5rem 0;
 }
 
 .swiper-content {
