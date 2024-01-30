@@ -99,7 +99,10 @@ function Contact() {
         <div className="contact-content">
           <div className="left-contact">
             <div className="contact-description" ref={contactDescriptionRef}>
-              <h2>Got an <b>opportunity</b>, or just want to say Hello ? <br/>Feel free to reach me out.</h2>
+              <h2>Whether you have a promising opportunity knocking at your door, or simply wish to extend a friendly greeting,
+                  don&apos;t hesitate to get in touch with me; I&apos;m always open to engaging in conversations,exploring new possibilities,
+                  and connecting with others in meaningful ways.
+              </h2>
             </div>
             <div className="contact-social-media">
               <div className="github" ref={contactGithubRef}>

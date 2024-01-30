@@ -83,5 +83,9 @@
 }
 
 .swiper-slide:not(.swiper-slide-active) img {
-  filter: blur(5px);
+  filter: blur(8px);
+}
+
+.swiper-pagination-bullet-active{
+  background: #E4DEBE !important;
 }

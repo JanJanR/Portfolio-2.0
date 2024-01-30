@@ -1,5 +1,9 @@
 .contact-container {
-  margin: 160px 0 160px 50px;
+  padding: 5rem;
+}
+
+.left-contact {
+  width: 50%;
 }
 
 .contact-title h1 {
@@ -8,7 +12,7 @@
 }
 
 .contact-description h2 {
-  text-align: start;
+  text-align: center;
   font-size: 30px;
 }
 
@@ -20,6 +24,7 @@
 .contact-social-media {
   display: flex;
   justify-content: space-around;
+  padding: 5rem;
 }
 
 .contact-content {
@@ -30,9 +35,24 @@
 }
 
 .right-contact {
-  background-color: #E4DEBE;
   width: 40%;
-  height: 860px;
+  height: auto;
+  background: rgba(36, 36, 36, 0.1); /* Glassmorphism background */
+  backdrop-filter: blur(5px);
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+.right-contact input,
+.right-contact textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 5px;
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(19px);
+  color: #fff;
 }
 
 form {
@@ -42,7 +62,7 @@ form {
 
 label h2 {
   text-align: start;
-  color: #242424;
+  color: rgba(255, 255, 255, 0.87);
 }
 
 .right-contact input {
@@ -51,7 +71,8 @@ label h2 {
 }
 
 .right-contact h1 {
-  color: #242424;
+  color: rgba(255, 255, 255, 0.87);
+  padding-bottom: 2rem;
 }
 
 textarea {

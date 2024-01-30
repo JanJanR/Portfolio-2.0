@@ -27,8 +27,6 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-
-
 // import { Link } from "react-router-dom";
 
 const images = [
@@ -39,65 +37,57 @@ const images = [
   { src: CindyKawak, title: 'Cindy Kawak', description: 'website to download an E-Book', link: "/projects/CindyKawak" },
 ]
 
+const imagesMarquee = [
+  {src: Ruby, alt:"ruby"},
+  {src: Rails, alt:"Rails"},
+  {src: React, alt:"React"},
+  {src: Firebase, alt:"Firebase"},
+  {src: Html, alt:"Html"},
+  {src: Css, alt:"Css"},
+  {src: Javascript, alt:"Javascript"},
+  {src: Figma, alt:"Figma"},
+  {src: Vercel, alt:"Vercel"},
+]
+
 function Home() {
+
+  const settings = {
+    effect: 'coverflow',
+    grabCursor: true,
+    centeredSlides: true,
+    slidesPerView: 'auto',
+    coverflowEffect: {
+      rotate: 0,
+      stretch: 0,
+      depth: 600,
+      modifier: 1,
+      slideShadows: false,
+    },
+    pagination: true,
+    modules: [EffectCoverflow, Pagination],
+    initialSlide: 2,
+    className: 'mySwiper',
+  };
 
   return (
     <>
       <VantaBackground />
         <div className='slider-container'>
-          <Marquee>
-            <div className='stack-slider'>
-              <div className='img-container'>
-                <img src={Ruby} alt="ruby" loading="lazy" />
+        <Marquee>
+          <div className='stack-slider'>
+            {imagesMarquee.map((image, index) => (
+              <div className='img-container' key={index}>
+                <img src={image.src} alt={image.alt} loading="lazy" />
               </div>
-              <div className='img-container'>
-                <img src={Rails} alt="rails" loading="lazy"/>
-              </div>
-              <div className='img-container'>
-                <img src={React} alt="react" loading="lazy"/>
-              </div>
-              <div className='img-container'>
-                <img src={Firebase} alt="firebase" loading="lazy"/>
-              </div>
-              <div className='img-container'>
-                <img src={Html} alt="html"loading="lazy" />
-              </div>
-              <div className='img-container'>
-                <img src={Css} alt="css" loading="lazy"/>
-              </div>
-              <div className='img-container'>
-                <img src={Javascript} alt="javascript"loading="lazy" />
-              </div>
-              <div className='img-container'>
-                <img src={Figma} alt="figma" loading="lazy"/>
-              </div>
-              <div className='img-container'>
-                <img src={Vercel} alt="vercel"loading="lazy" />
-              </div>
-            </div>
-          </Marquee>
+            ))}
+          </div>
+        </Marquee>
         </div>
       <div className='carousel-swiper'>
         <div className="work-title">
           <h1>Works</h1>
         </div>
-        <Swiper
-          effect={'coverflow'}
-          grabCursor={true}
-          centeredSlides={true}
-          slidesPerView={"auto"}
-          coverflowEffect={{
-            rotate: 0,
-            stretch: 0,
-            depth: 600,
-            modifier: 1,
-            slideShadows: false,
-          }}
-          pagination={true}
-          modules={[EffectCoverflow, Pagination]}
-          initialSlide={2}
-          className="mySwiper"
-        >
+        <Swiper {...settings}>
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <img src={image.src} alt={`Slide ${index + 1}`} />
