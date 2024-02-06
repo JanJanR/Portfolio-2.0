@@ -67,26 +67,33 @@ function Contact() {
     })
 
     tl.fromTo(contactGithubRef.current,{
-      y: 200
+      y: 200,
+      opacity: 0,
     },
     {
       y: 0,
+      opacity: 1,
+
       ease: "none"
     })
 
     tl.fromTo(contactMailRef.current,{
-      y: 200
+      y: 200,
+      opacity: 0,
     },
     {
       y: 0,
+      opacity: 1,
       ease: "none"
     })
 
     tl.fromTo(contactLinkedinlRef.current,{
-      y: 200
+      y: 200,
+      opacity: 0,
     },
     {
       y: 0,
+      opacity: 1,
       ease: "none"
     })
   })

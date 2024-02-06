@@ -105,17 +105,3 @@ function Home() {
 }
 
 export default Home
-
-// {/* <Slider {...settings}>
-// {images.map((image, index) => (
-//   <div key={index} className={index === imageIndex ? "slide activeSlide" : "slide"}>
-//   <img src={image.src} alt={image.title} />
-//   {index === imageIndex && (
-//     <Link to={image.link} className="slide-content">
-    // <h1>{image.title}</h1>
-    // <p>{image.description}</p>
-//     </Link>
-//     )}
-//     </div>
-//     ))}
-//   </Slider> */}
