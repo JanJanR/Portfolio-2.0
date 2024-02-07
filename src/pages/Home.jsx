@@ -27,7 +27,7 @@ import 'swiper/css';
 import 'swiper/css/effect-coverflow';
 import 'swiper/css/pagination';
 
-// import { Link } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 const images = [
   { src: Walkin, title: 'WalkIn', description: 'mobile app that helps people to find a table for tonight to make a reservation', link: "/projects/Walkin" },
@@ -50,7 +50,6 @@ const imagesMarquee = [
 ]
 
 function Home() {
-
   const settings = {
     effect: 'coverflow',
     grabCursor: true,
@@ -94,7 +93,9 @@ function Home() {
             <div className='swiper-content'>
               <h1>{image.title}</h1>
               <p>{image.description}</p>
-              <button className='projects-btn'>View Project</button>
+              <Link to={image.link}>
+                <button className='projects-btn'>View Project</button>
+              </Link>
             </div>
           </SwiperSlide>
         ))}
