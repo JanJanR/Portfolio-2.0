@@ -8,8 +8,6 @@ import { IconX } from '@tabler/icons-react';
 
 import { motion } from 'framer-motion';
 
-// import { useGSAP } from "@gsap/react";
-// import gsap from "gsap";
 
 function Navbar() {
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -33,52 +31,6 @@ function Navbar() {
       document.body.style.overflow = 'auto';
     };
   }, [isModalOpen]);
-
-  // const tl = gsap.timeline();
-  // const logoRef = useRef(null);
-  // const projectsRef = useRef(null);
-  // const aboutRef = useRef(null);
-  // const contactRef = useRef(null);
-
-  // useGSAP (() => {
-  //   tl.fromTo(logoRef.current,{
-  //     y: -105
-  //   },
-  //   {
-  //     y: 0,
-  //     ease: "none"
-  //   })
-
-  //   tl.fromTo(projectsRef.current,{
-  //     y: -105
-  //   },
-  //   {
-  //     y: 0,
-  //     ease: "none"
-  //   })
-
-  //   tl.fromTo(aboutRef.current,{
-  //     y: -105
-  //   },
-  //   {
-  //     y: 0,
-  //     ease: "none"
-  //   })
-
-  //   tl.fromTo(contactRef.current,{
-  //     y: -105
-  //   },
-  //   {
-  //     y: 0,
-  //     ease: "none"
-  //   })
-  // })
-
-  // ref={logoRef}
-  // ref={projectsRef}
-  // ref={aboutRef}
-  // ref={contactRef}
-  // ref={contactRef}
 
   return (
     <div className="navbar-container">
@@ -131,3 +83,50 @@ function Navbar() {
   )
 }
 export default Navbar
+
+
+  // const tl = gsap.timeline();
+  // const logoRef = useRef(null);
+  // const projectsRef = useRef(null);
+  // const aboutRef = useRef(null);
+  // const contactRef = useRef(null);
+
+  // useGSAP (() => {
+  //   tl.fromTo(logoRef.current,{
+  //     y: -105
+  //   },
+  //   {
+  //     y: 0,
+  //     ease: "none"
+  //   })
+
+  //   tl.fromTo(projectsRef.current,{
+  //     y: -105
+  //   },
+  //   {
+  //     y: 0,
+  //     ease: "none"
+  //   })
+
+  //   tl.fromTo(aboutRef.current,{
+  //     y: -105
+  //   },
+  //   {
+  //     y: 0,
+  //     ease: "none"
+  //   })
+
+  //   tl.fromTo(contactRef.current,{
+  //     y: -105
+  //   },
+  //   {
+  //     y: 0,
+  //     ease: "none"
+  //   })
+  // })
+
+  // ref={logoRef}
+  // ref={projectsRef}
+  // ref={aboutRef}
+  // ref={contactRef}
+  // ref={contactRef}

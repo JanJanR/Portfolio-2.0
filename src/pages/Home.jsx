@@ -94,6 +94,7 @@ function Home() {
             <div className='swiper-content'>
               <h1>{image.title}</h1>
               <p>{image.description}</p>
+              <button className='projects-btn'>View Project</button>
             </div>
           </SwiperSlide>
         ))}

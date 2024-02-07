@@ -42,18 +42,22 @@ function Contact() {
 
   useGSAP (() => {
     tl.fromTo(contactTitleRef.current,{
-      x: -1000
+      x: -100,
+      opacity: 0,
     },
     {
       x: 0,
+      opacity: 1,
       ease: "none"
     })
 
     tl.fromTo(contactDescriptionRef.current,{
-      x: -1000
+      x: -100,
+      opacity: 0,
     },
     {
       x: 0,
+      opacity: 1,
       ease: "none"
     })
 
@@ -67,7 +71,7 @@ function Contact() {
     })
 
     tl.fromTo(contactGithubRef.current,{
-      y: 200,
+      y: 10,
       opacity: 0,
     },
     {
@@ -78,7 +82,7 @@ function Contact() {
     })
 
     tl.fromTo(contactMailRef.current,{
-      y: 200,
+      y: 10,
       opacity: 0,
     },
     {
@@ -88,7 +92,7 @@ function Contact() {
     })
 
     tl.fromTo(contactLinkedinlRef.current,{
-      y: 200,
+      y: 10,
       opacity: 0,
     },
     {

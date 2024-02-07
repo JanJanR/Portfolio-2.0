@@ -27,6 +27,7 @@
   background-color: #E4DEBE ;
   color: black;
   border-radius: 3px;
+  padding: 1rem;
 }
 
 .navbar-projects:hover,
