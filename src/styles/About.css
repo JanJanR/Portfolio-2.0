@@ -1,0 +1,14 @@
+.about-container{
+  background-color: black;
+  height: 100vh;
+}
+
+.about-title {
+  font-size: 250px;
+  font-family: 'Syncopate', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 75vh;
+  text-align: center;
+}
