@@ -4,35 +4,8 @@ import '../styles/About.css'
 import Typewriter from 'typewriter-effect';
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/scrolldown.json";
-import Marquee from "react-fast-marquee";
-import Iframe from 'react-iframe'
 
-
-import Ruby from "../assets/marquee/ruby.svg";
-import Rails from "../assets/marquee/rails.svg"
-import React from "../assets/marquee/react.svg"
-import Firebase from "../assets/marquee/firebase.svg"
-import Html from "../assets/marquee/html.svg"
-import Css from "../assets/marquee/css.svg"
-import Javascript from "../assets/marquee/javascript.svg"
-import Figma from "../assets/marquee/figma.svg"
-import Vercel from "../assets/marquee/vercel.svg"
-
-import AirBroomNBroom from "../assets/slider/AirBroomNBroom.png";
-
-
-
-const imagesMarquee = [
-  {src: Ruby, alt:"ruby"},
-  {src: Rails, alt:"Rails"},
-  {src: React, alt:"React"},
-  {src: Firebase, alt:"Firebase"},
-  {src: Html, alt:"Html"},
-  {src: Css, alt:"Css"},
-  {src: Javascript, alt:"Javascript"},
-  {src: Figma, alt:"Figma"},
-  {src: Vercel, alt:"Vercel"},
-]
+import Background from "../assets/background.jpg";
 
 function About() {
   const defaultOptions = {
@@ -48,22 +21,14 @@ function About() {
     <>
     <div className="about-container">
       <div className="about-hero">
-        {/* <img src={AirBroomNBroom} alt=""  className="about-background"/> */}
-        <Iframe
-          url="https://giphy.com/embed/pVGsAWjzvXcZW4ZBTE"
-          position="absolute"
-          // width="100%"
-          id="myId"
-          className="about-background"
-          // height="100%"
-        />
+        <img src={Background} alt=""  className="about-background"/>
         <div>
           <Navbar />
         </div>
         <div className="about-title">
         <Typewriter
           options={{
-            strings: ['Hi', 'Salut',' Ciao', 'Hola'],
+            strings: ['Hola', 'Salut',' Hi', 'Ciao'],
             autoStart: true,
             loop: true,
             delay: 200,
@@ -75,17 +40,6 @@ function About() {
           height={80}
           width={80}
           />
-      </div>
-      <div className='slider-container'>
-        <Marquee>
-          <div className='stack-slider'>
-            {imagesMarquee.map((image, index) => (
-              <div className='img-container' key={index}>
-                <img src={image.src} alt={image.alt} loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </Marquee>
       </div>
       <div className="about-description">
         <p>
