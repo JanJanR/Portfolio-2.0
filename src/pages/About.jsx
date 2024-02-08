@@ -37,8 +37,8 @@ function About() {
         </div>
         <Lottie
           options={defaultOptions}
-          height={80}
-          width={80}
+          height={65}
+          width={65}
           />
       </div>
       <div className="about-description">
