@@ -23,6 +23,10 @@
   text-align: center;
 }
 
+.about-description-container{
+  margin-top: 150px;
+}
+
 .about-description {
   margin: 50px 0 50px 0;
   display: flex;
@@ -30,12 +34,6 @@
 }
 
 .about-separation-container{
-  margin-top: 180px;
-  display: flex;
-  justify-content: center;
-}
-
-.about-separation-container-2{
   display: flex;
   justify-content: center;
 }
@@ -53,32 +51,7 @@
   text-align: center;
 }
 
-.about-slider-container{
-  margin-top: 150px;
-  margin-bottom: 150px;
-}
-
-.about-slider {
-  padding: 3rem 0;
-  display: flex;
-  justify-content: space-around;
-}
-
-.img-gif {
+.img-gif{
   width: 300px;
   height: 300px;
-  border: none;
-  margin-right: 3rem;
-}
-
-.img-gif-airplane {
-  height: 300px;
-  width: 530px;
-  border: none;
-}
-
-.img-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
