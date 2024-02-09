@@ -24,12 +24,61 @@
 }
 
 .about-description {
-  margin-top: 50px;
+  margin: 50px 0 50px 0;
+  display: flex;
+  justify-content: center;
+}
+
+.about-separation-container{
+  margin-top: 180px;
+  display: flex;
+  justify-content: center;
+}
+
+.about-separation-container-2{
+  display: flex;
+  justify-content: center;
+}
+
+.about-big-separation {
+  height: 1px;
+  width: 60%;
+  background-color: rgb(100, 100, 100);
 }
 
 .about-description p {
   font-family: 'Taviraj', serif;
   font-size: 25px;
-  width: 50%;
-  height: 1500px;
+  width: 60%;
+  text-align: center;
+}
+
+.about-slider-container{
+  margin-top: 150px;
+  margin-bottom: 150px;
+}
+
+.about-slider {
+  padding: 3rem 0;
+  display: flex;
+  justify-content: space-around;
+}
+
+.img-gif {
+  width: 300px;
+  height: 300px;
+  border: none;
+  margin-right: 3rem;
+}
+
+.img-gif-airplane {
+  height: 300px;
+  width: 530px;
+  border: none;
+}
+
+.img-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
