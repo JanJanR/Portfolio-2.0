@@ -24,7 +24,7 @@
 }
 
 .about-description-container{
-  padding: 20vh 10vw;
+  padding: 20vh 10vw 0;
 }
 
 .about-title-description{
@@ -54,12 +54,11 @@
 .about-description p {
   font-family: 'Taviraj', serif;
   font-size: 25px;
-  /* width: 60%; */
   text-align: center;
 }
 
 .about-projects {
-  padding: 0 10vw;
+  padding: 20vh 10vw;
 }
 
 .projects-content {

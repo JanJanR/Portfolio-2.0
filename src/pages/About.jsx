@@ -1,11 +1,11 @@
 import '../styles/About.css'
 import Navbar from "../components/Navbar"
 import Contact from "../components/Contact";
-// import Iframe from "react-iframe";
 
 import Typewriter from 'typewriter-effect';
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/scrolldown.json";
+
 
 import Background from "../assets/background.jpg";
 

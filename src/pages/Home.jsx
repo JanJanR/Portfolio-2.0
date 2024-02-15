@@ -72,15 +72,15 @@ function Home() {
     <>
       <VantaBackground />
         <div className='slider-container'>
-        <Marquee>
-          <div className='stack-slider'>
-            {imagesMarquee.map((image, index) => (
-              <div className='img-container' key={index}>
-                <img src={image.src} alt={image.alt} loading="lazy" />
-              </div>
-            ))}
-          </div>
-        </Marquee>
+          <Marquee>
+            <div className='stack-slider'>
+              {imagesMarquee.map((image, index) => (
+                <div className='img-container' key={index}>
+                  <img src={image.src} alt={image.alt} loading="lazy" />
+                </div>
+              ))}
+            </div>
+          </Marquee>
         </div>
       <div className='carousel-swiper'>
         <div className="work-title">
