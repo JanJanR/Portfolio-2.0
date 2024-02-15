@@ -41,7 +41,7 @@ function About() {
           options={defaultOptions}
           height={65}
           width={65}
-          />
+        />
       </div>
       <div className='about-description-container'>
         <p className='about-title-description'>Who Am I</p>
