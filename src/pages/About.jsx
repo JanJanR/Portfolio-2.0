@@ -1,7 +1,7 @@
 import '../styles/About.css'
 import Navbar from "../components/Navbar"
 import Contact from "../components/Contact";
-import Iframe from "react-iframe";
+// import Iframe from "react-iframe";
 
 import Typewriter from 'typewriter-effect';
 import Lottie from "react-lottie";
@@ -44,6 +44,7 @@ function About() {
           />
       </div>
       <div className='about-description-container'>
+        <p className='about-title-description'>Who Am I</p>
         <div className="about-separation-container">
             <div className="about-big-separation"></div>
         </div>
@@ -56,10 +57,46 @@ function About() {
           </p>
         </div>
       </div>
-      {/* <Iframe url='https://gifer.com/embed/5SBk' className='img-gif'/> */}
-      {/* <div className="about-separation-container-2">
+      <div className='about-projects'>
+        <div className="about-separation-container">
           <div className="about-big-separation"></div>
-      </div> */}
+        </div>
+        <div className="projects-content">
+          <div className="index">(01)</div>
+          <h1>PhilCannesDetailiing</h1>
+        </div>
+        <div className="about-separation-container">
+          <div className="about-big-separation"></div>
+        </div>
+        <div className="projects-content">
+          <div className="index">(02)</div>
+          <h1>CartePub</h1>
+        </div>
+        <div className="about-separation-container">
+          <div className="about-big-separation"></div>
+        </div>
+        <div className="projects-content">
+          <div className="index">(03)</div>
+          <h1>CindyKawak</h1>
+        </div>
+        <div className="about-separation-container">
+          <div className="about-big-separation"></div>
+        </div>
+        <div className="projects-content">
+          <div className="index">(04)</div>
+          <h1>Walkin</h1>
+        </div>
+        <div className="about-separation-container">
+          <div className="about-big-separation"></div>
+        </div>
+        <div className="projects-content">
+          <div className="index">(05)</div>
+          <h1>AirBroomNBroom</h1>
+        </div>
+        <div className="about-separation-container">
+          <div className="about-big-separation"></div>
+        </div>
+      </div>
       <Contact/>
     </div>
     </>
