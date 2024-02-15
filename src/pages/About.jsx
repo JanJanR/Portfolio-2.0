@@ -5,7 +5,7 @@ import Contact from "../components/Contact";
 import Typewriter from 'typewriter-effect';
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/scrolldown.json";
-
+import developerData from "../assets/lottie/developer.json";
 
 import Background from "../assets/background.jpg";
 
@@ -14,6 +14,15 @@ function About() {
     loop: true,
     autoplay: true,
     animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
+
+  const defaultOptionsDeveloper = {
+    loop: true,
+    autoplay: true,
+    animationData: developerData,
     rendererSettings: {
       preserveAspectRatio: "xMidYMid slice"
     }
@@ -57,6 +66,11 @@ function About() {
           </p>
         </div>
       </div>
+      <Lottie
+          options={defaultOptionsDeveloper}
+          height={400}
+          width={450}
+        />
       <div className='about-projects'>
         <div className="about-separation-container">
           <div className="about-big-separation"></div>
