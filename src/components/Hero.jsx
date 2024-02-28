@@ -63,11 +63,11 @@ function Hero() {
     <div className="hero-container">
       <div className="hero-name-container">
         <div className="hero-name">
-          <div className="box-name" ref={heroBoxNameRef}></div>
+          {/* <div className="box-name" ref={heroBoxNameRef}></div> */}
           <h1>John</h1>
         </div>
         <div className="hero-lastname">
-          <div className="box-lastname" ref={heroBoxLastNameRef}></div>
+          {/* <div className="box-lastname" ref={heroBoxLastNameRef}></div> */}
           <h1>Romero</h1>
         </div>
       </div>
