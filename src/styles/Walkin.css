@@ -1,10 +1,44 @@
-.walkin-hero img{
+.walkin-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+.walkin-background {
   height: 100vh;
   width: 100%;
-  object-fit: cover;
   position: absolute;
   z-index: -1;
-  border: none;
-  background-color: white;
-  /* filter: grayscale(100%); */
+  object-fit: cover;
+}
+
+.walkin-hero-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.walkin-hero-content h1 {
+  font-size: 100px;
+}
+
+.walkin-hero-right h3{
+  max-width: 600px;
+  font-family: 'Taviraj', serif;
+  padding-bottom: 2rem;
+}
+
+.walkin-hero-right p {
+  margin: 0;
+  font-family: 'Taviraj', serif;
+  font-size: 15px;
+}
+
+.walkin-hero-right h4 {
+  margin: 0;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 15px;
+}
+
+.walkin-description {
+  padding-bottom: 1rem;
 }
