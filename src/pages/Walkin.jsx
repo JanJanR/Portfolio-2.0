@@ -62,6 +62,9 @@ function Walkin() {
         <video autoPlay loop muted>
           <source src={ShowRestaurant}/>
         </video>
+        <video autoPlay loop muted>
+          <source src={SearchRestaurant}/>
+        </video>
       </div>
     </div>
     </>
