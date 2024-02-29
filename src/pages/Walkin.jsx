@@ -1,7 +1,10 @@
 import "../styles/Walkin.css";
 import Navbar from "../components/Navbar";
+
 import WalkinHero from "../assets/walkin/walkin-bg.png";
 import LandingPage from "../assets/walkin/LandingPage.mov";
+import ShowRestaurant from "../assets/walkin/showrestaurant.mov";
+import SearchRestaurant from "../assets/walkin/SearchRestaurant.mov";
 
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/scrolldown.json";
@@ -55,6 +58,9 @@ function Walkin() {
       <div className="walkin-expo">
         <video autoPlay loop muted>
           <source src={LandingPage}/>
+        </video>
+        <video autoPlay loop muted>
+          <source src={ShowRestaurant}/>
         </video>
       </div>
     </div>

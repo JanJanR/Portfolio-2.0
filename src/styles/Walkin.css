@@ -52,4 +52,6 @@
 .walkin-expo {
   padding: 10rem 6rem 0 6rem;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
 }
