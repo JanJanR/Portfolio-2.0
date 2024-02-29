@@ -13,6 +13,9 @@ import FavouritesRestaurant from "../assets/walkin/FavouritesRestaurant.mov";
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/scrolldown.json";
 
+import Contact from "../components/Contact";
+
+
 function Walkin() {
   const defaultOptions = {
     loop: true,
@@ -49,7 +52,7 @@ function Walkin() {
             </div>
             <div className="walkin-description">
               <h4>Techs</h4>
-              <p>Figma, Ruby on Rails</p>
+              <p>Figma, Ruby on Rails, Javascript, Bootstrap</p>
             </div>
           </div>
         </div>
@@ -82,6 +85,7 @@ function Walkin() {
           <source src={FavouritesRestaurant}/>
         </video>
       </div>
+      <Contact/>
     </div>
     </>
   )
