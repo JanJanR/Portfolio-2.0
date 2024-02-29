@@ -6,6 +6,8 @@ import LandingPage from "../assets/walkin/LandingPage.mov";
 import ShowRestaurant from "../assets/walkin/showrestaurant.mov";
 import SearchRestaurant from "../assets/walkin/SearchRestaurant.mov";
 import RestaurantDetails from "../assets/walkin/RestaurantDetails.mov";
+import Reservation from "../assets/walkin/Reservation.mov";
+import RestaurantDirection from "../assets/walkin/RestaurantDirection.mov";
 
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/scrolldown.json";
@@ -68,6 +70,12 @@ function Walkin() {
         </video>
         <video autoPlay loop muted>
           <source src={RestaurantDetails}/>
+        </video>
+        <video autoPlay loop muted>
+          <source src={Reservation}/>
+        </video>
+        <video autoPlay loop muted>
+          <source src={RestaurantDirection}/>
         </video>
       </div>
     </div>
