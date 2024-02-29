@@ -1,8 +1,20 @@
-import Navbar from "../components/Navbar";
-import WalkinHero from "../assets/walkin-bg.png";
 import "../styles/Walkin.css";
+import Navbar from "../components/Navbar";
+import WalkinHero from "../assets/walkin/walkin-bg.png";
+import LandingPage from "../assets/walkin/LandingPage.mov";
+
+import Lottie from "react-lottie";
+import animationData from "../assets/lottie/scrolldown.json";
 
 function Walkin() {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
   return (
     <>
     <div className="walkin-container">
@@ -34,6 +46,16 @@ function Walkin() {
             </div>
           </div>
         </div>
+        <Lottie
+          options={defaultOptions}
+          height={65}
+          width={65}
+        />
+      </div>
+      <div className="walkin-expo">
+        <video autoPlay loop muted>
+          <source src={LandingPage}/>
+        </video>
       </div>
     </div>
     </>

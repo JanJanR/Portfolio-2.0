@@ -21,6 +21,12 @@
   font-size: 100px;
 }
 
+.walkin-hero-right {
+  padding-top: 5rem;
+  padding-bottom: 14rem;
+  padding-left: 30rem;
+}
+
 .walkin-hero-right h3{
   max-width: 600px;
   font-family: 'Taviraj', serif;
@@ -41,4 +47,9 @@
 
 .walkin-description {
   padding-bottom: 1rem;
+}
+
+.walkin-expo {
+  padding: 10rem 6rem 0 6rem;
+  margin: 0 auto;
 }
