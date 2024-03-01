@@ -10,6 +10,8 @@ import Reservation from "../assets/walkin/Reservation.mov";
 import RestaurantDirection from "../assets/walkin/RestaurantDirection.mov";
 import FavouritesRestaurant from "../assets/walkin/FavouritesRestaurant.mov";
 
+import PhilCannes from "../assets/philcannes/philcannes-bg.png";
+
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/scrolldown.json";
 
@@ -37,7 +39,7 @@ function Walkin() {
           <div className="walkin-hero-right">
             <h1>Walkin</h1>
             <h3>
-              Our collaborative project, developed with three team members, introduces a user-friendly mobile app focused on simplifying dining reservations.
+              Our collaborative project, developed with four team members, introduces a user-friendly mobile app focused on simplifying dining reservations.
               This innovative application enables users to effortlessly find and secure a table for the evening, enhancing the overall dining experience.
               With streamlined reservation functionalities, our app bridges the gap between diners and restaurants,
               offering a convenient solution for those seeking a hassle-free way to plan their dining outings.
@@ -86,6 +88,7 @@ function Walkin() {
         </video>
       </div>
       <Contact/>
+      <img src={PhilCannes} alt="philcannes" className="philcannes-bg"/>
     </div>
     </>
   )
