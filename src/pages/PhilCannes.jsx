@@ -2,6 +2,7 @@ import "../styles/PhilCannes.css"
 
 import Navbar from "../components/Navbar";
 import PhilCannesHero from "../assets/philcannes/philcannes-bg-shadow.png";
+import PhilCannesLandingPage from "../assets/philcannes/LandingPage.png";
 
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/scrolldown.json";
@@ -34,7 +35,7 @@ function PhilCannes() {
               </h3>
               <div className="philcannes-description">
                 <h4>Date</h4>
-                <p>Dec 2022</p>
+                <p>Apr 2023</p>
               </div>
               <div className="philcannes-description">
                 <h4>Role</h4>
@@ -52,7 +53,9 @@ function PhilCannes() {
             width={65}
           />
         </div>
-        <div>PhilCannes</div>
+        <div className="philcannes-expo">
+          <img src={PhilCannesLandingPage} alt="" />
+        </div>
       </div>
     </>
   )

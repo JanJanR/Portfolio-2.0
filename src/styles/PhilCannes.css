@@ -43,3 +43,16 @@
 .philcannes-description {
   padding-bottom: 1rem;
 }
+
+.philcannes-expo {
+  padding: 10rem 6rem 0 6rem;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+}
+
+.philcannes-expo img{
+  width: 50%;
+  margin: 0 auto;
+  padding-bottom: 4rem;
+}
