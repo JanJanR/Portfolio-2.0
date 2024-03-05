@@ -1,11 +1,19 @@
 import "../styles/PhilCannes.css"
 
 import Navbar from "../components/Navbar";
+
 import PhilCannesHero from "../assets/philcannes/philcannes-bg-shadow.png";
 import PhilCannesLandingPage from "../assets/philcannes/LandingPage.png";
+import PhilCannesBoatServices from "../assets/philcannes/BoatServices.png";
+import PhilCannesDetails from "../assets/philcannes/DetailPackages.png";
+import PhilCannesContact from "../assets/philcannes/ContactForm.png";
+import CartePub from "../assets/cartepub/cartepub-bg.png";
 
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/scrolldown.json";
+
+import Contact from "../components/Contact";
+
 
 function PhilCannes() {
   const defaultOptions = {
@@ -54,8 +62,13 @@ function PhilCannes() {
           />
         </div>
         <div className="philcannes-expo">
-          <img src={PhilCannesLandingPage} alt="" />
+          <img src={PhilCannesLandingPage} alt="landing page philcannes" />
+          <img src={PhilCannesBoatServices} alt="boat services philcannes" />
+          <img src={PhilCannesDetails} alt="details philcannes" />
+          <img src={PhilCannesContact} alt="contact philcannes" />
         </div>
+        <Contact/>
+        <img src={CartePub} alt="" className="cartepub-bg"/>
       </div>
     </>
   )
