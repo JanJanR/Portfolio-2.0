@@ -1,0 +1,44 @@
+.philcannes-bg-shadow {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.philcannes-hero-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.philcannes-hero-right {
+  padding-top: 5rem;
+  padding-left: 30rem;
+}
+
+.philcannes-hero-right h1 {
+  font-size: 65px;
+}
+
+.philcannes-hero-right h3 {
+  max-width: 600px;
+  font-family: 'Taviraj', serif;
+  padding-bottom: 2rem;
+}
+
+.philcannes-hero-right h4 {
+  margin: 0;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 15px;
+}
+
+.philcannes-hero-right p {
+  margin: 0;
+  font-family: 'Taviraj', serif;
+  font-size: 15px;
+}
+
+
+.philcannes-description {
+  padding-bottom: 1rem;
+}
