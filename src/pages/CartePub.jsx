@@ -35,7 +35,7 @@ function CartePub() {
               </h3>
               <div className="cartepub-description">
                 <h4>Date</h4>
-                <p>Mar 2024</p>
+                <p>Avr 2024</p>
               </div>
               <div className="cartepub-description">
                 <h4>Role</h4>
