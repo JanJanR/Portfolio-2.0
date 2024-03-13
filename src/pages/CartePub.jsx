@@ -1,21 +1,8 @@
 import "../styles/CartePub.css"
-
 import Navbar from "../components/Navbar";
-
-import Lottie from "react-lottie";
-import animationData from "../assets/lottie/scrolldown.json";
-
 import CartePubHero from "../assets/cartepub/cartepub-bg-shadow.png";
 
 function CartePub() {
-  const defaultOptions = {
-    loop: true,
-    autoplay: true,
-    animationData: animationData,
-    rendererSettings: {
-      preserveAspectRatio: "xMidYMid slice"
-    }
-  };
   return (
     <>
       <div className="cartepub-container">
@@ -47,11 +34,6 @@ function CartePub() {
               </div>
             </div>
           </div>
-          <Lottie
-            options={defaultOptions}
-            height={65}
-            width={65}
-          />
         </div>
       </div>
     </>
