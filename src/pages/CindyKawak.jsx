@@ -3,6 +3,8 @@ import "../styles/cindykawak.css"
 import Navbar from "../components/Navbar";
 
 import CindyKawakHero from "../assets/cindykawak/cindykawak-bg-shadow.png";
+import CindyKawakLandingPage from "../assets/cindykawak/landing-page.png";
+import CindyKawakForm from "../assets/cindykawak/second-page.png";
 
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/scrolldown.json";
@@ -52,8 +54,11 @@ function CindyKawak() {
             width={65}
           />
         </div>
+        <div className="cindykawak-expo">
+          <img src={CindyKawakLandingPage} alt="landing page cindy kawak" />
+          <img src={CindyKawakForm} alt="form cindy kawak" />
+        </div>
       </div>
-      <div>CindyKawak</div>
     </>
   )
 }
