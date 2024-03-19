@@ -1,8 +1,21 @@
-import Navbar from "../components/Navbar";
 import "../styles/cindykawak.css"
+
+import Navbar from "../components/Navbar";
+
 import CindyKawakHero from "../assets/cindykawak/cindykawak-bg-shadow.png";
 
+import Lottie from "react-lottie";
+import animationData from "../assets/lottie/scrolldown.json";
+
 function CindyKawak() {
+  const defaultOptions = {
+    loop: true,
+    autoplay: true,
+    animationData: animationData,
+    rendererSettings: {
+      preserveAspectRatio: "xMidYMid slice"
+    }
+  };
   return (
     <>
       <div className="cindykawak-container">
@@ -23,16 +36,21 @@ function CindyKawak() {
                 <h4>Date</h4>
                 <p>Dec 2023</p>
               </div>
-              <div className="ciindykawak-description">
+              <div className="cindykawak-description">
                 <h4>Role</h4>
                 <p>Designer, Dev</p>
               </div>
-              <div className="ciindykawak-description">
+              <div className="cindykawak-description">
                 <h4>Techs</h4>
                 <p>ReactJS, Figma, Javascript</p>
               </div>
             </div>
           </div>
+          <Lottie
+            options={defaultOptions}
+            height={65}
+            width={65}
+          />
         </div>
       </div>
       <div>CindyKawak</div>
