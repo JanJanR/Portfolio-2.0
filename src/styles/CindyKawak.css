@@ -1,0 +1,45 @@
+.cindykawak-bg-shadow {
+  height: 100vh;
+  width: 100%;
+  position: absolute;
+  z-index: -1;
+  object-fit: cover;
+}
+
+.cindykawak-hero-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.cindykawak-hero-right {
+  padding-top: 6rem;
+  padding-bottom: 13rem;
+  padding-left: 10rem;
+}
+
+.cindykawak-hero-right h1 {
+  font-size: 90px;
+  max-width: 500px;
+}
+
+.cindykawak-hero-right h3 {
+  max-width: 600px;
+  font-family: 'Taviraj', serif;
+  margin-bottom: 1rem;
+}
+
+.cindykawak-hero-right h4 {
+  margin: 0;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 15px;
+}
+
+.cindykawak-hero-right p {
+  margin: 0;
+  font-family: 'Taviraj', serif;
+  font-size: 15px;
+}
+
+.cindykawak-description {
+  padding-bottom: 1rem;
+}
