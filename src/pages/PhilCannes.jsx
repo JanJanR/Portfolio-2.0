@@ -68,7 +68,7 @@ function PhilCannes() {
           <img src={PhilCannesContact} alt="contact philcannes" />
         </div>
         <Contact/>
-        <img src={CartePub} alt="" className="cartepub-bg"/>
+        <img src={CartePub} alt="cartepub" className="cartepub-bg"/>
       </div>
     </>
   )

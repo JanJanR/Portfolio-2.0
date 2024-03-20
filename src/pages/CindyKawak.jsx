@@ -5,6 +5,7 @@ import Navbar from "../components/Navbar";
 import CindyKawakHero from "../assets/cindykawak/cindykawak-bg-shadow.png";
 import CindyKawakLandingPage from "../assets/cindykawak/landing-page.png";
 import CindyKawakForm from "../assets/cindykawak/second-page.png";
+import AirBroomNBroom from "../assets/airbroomnbroom/AirbroomNbroom.png";
 
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/scrolldown.json";
@@ -61,6 +62,7 @@ function CindyKawak() {
           <img src={CindyKawakForm} alt="form cindy kawak" />
         </div>
         <Contact/>
+        <img src={AirBroomNBroom} alt="airbroomnbroom" className="airbroomnbroom-bg" />
       </div>
     </>
   )
