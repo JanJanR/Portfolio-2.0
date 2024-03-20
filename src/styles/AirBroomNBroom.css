@@ -5,3 +5,40 @@
   z-index: -1;
   object-fit: cover;
 }
+
+.airbroomnbroom-hero-content {
+  display: flex;
+  justify-content: space-around;
+}
+
+.airbroomnbroom-hero-right{
+  padding-top: 10rem;
+  padding-left: 60rem;
+}
+
+.airbroomnbroom-hero-right h1 {
+  font-size: 65px;
+}
+
+.airbroomnbroom-hero-right h3 {
+  max-width: 600px;
+  font-family: 'Taviraj', serif;
+  padding-bottom: 2rem;
+
+}
+
+.airbroomnbroom-hero-right h4 {
+  margin: 0;
+  font-family: 'Syncopate', sans-serif;
+  font-size: 15px;
+}
+
+.airbroomnbroom-hero-right p {
+  margin: 0;
+  font-family: 'Taviraj', serif;
+  font-size: 15px;
+}
+
+.airbroomnbroom-description {
+  padding-bottom: 1rem;
+}
