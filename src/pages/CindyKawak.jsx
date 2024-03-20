@@ -9,6 +9,8 @@ import CindyKawakForm from "../assets/cindykawak/second-page.png";
 import Lottie from "react-lottie";
 import animationData from "../assets/lottie/scrolldown.json";
 
+import Contact from "../components/Contact";
+
 function CindyKawak() {
   const defaultOptions = {
     loop: true,
@@ -58,6 +60,7 @@ function CindyKawak() {
           <img src={CindyKawakLandingPage} alt="landing page cindy kawak" />
           <img src={CindyKawakForm} alt="form cindy kawak" />
         </div>
+        <Contact/>
       </div>
     </>
   )
