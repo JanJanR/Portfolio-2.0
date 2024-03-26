@@ -42,3 +42,14 @@
 .airbroomnbroom-description {
   padding-bottom: 1rem;
 }
+
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .airbroomnbroom-hero-right h1 {
+    font-size: 30px;
+  }
+
+  .airbroomnbroom-hero-right{
+    padding-left: 29rem;
+  }
+}
