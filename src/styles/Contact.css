@@ -104,3 +104,31 @@ textarea {
   color: white;
   cursor: pointer;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .left-contact {
+    width: 100%;
+    padding-top: 5rem;
+  }
+
+  .contact-title h1 {
+    font-size: 60px;
+  }
+
+  .contact-container {
+    padding: 3rem;
+  }
+
+  .contact-content {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .right-contact {
+    width: 100%;
+  }
+
+  .contact-description h2 {
+    font-size: 25px;
+  }
+}
