@@ -62,3 +62,17 @@
   height: 100vh;
   object-fit: cover;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .philcannes-hero-right h1 {
+    font-size: 40px;
+  }
+
+  .philcannes-hero-right {
+    padding-bottom: 18rem;
+  }
+
+  .philcannes-expo img{
+    width: 100%;
+  }
+}
