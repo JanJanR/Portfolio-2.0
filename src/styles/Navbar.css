@@ -99,3 +99,14 @@
     transform: translateY(-100%);
   }
 }
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .modal h1 {
+    font-size: 45px;
+    padding-bottom: 1rem;
+  }
+
+  .icon-x {
+    width: 50px;
+  }
+}
