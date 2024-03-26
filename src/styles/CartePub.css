@@ -43,3 +43,9 @@
 .cartepub-description {
   padding-bottom: 1rem;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .cartepub-hero-right h1 {
+    font-size: 45px;
+  }
+}
