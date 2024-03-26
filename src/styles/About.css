@@ -73,3 +73,17 @@
 .index{
   font-family: 'Taviraj', serif;
 }
+
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+  .about-title {
+    font-size: 160px;
+  }
+
+  .projects-content h1 {
+    font-size: 40px;
+  }
+
+  .about-projects {
+    padding: 17vh 10vw;
+  }
+}
